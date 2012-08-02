@@ -39,8 +39,14 @@ void InitExample1()
     glBindVertexArray(vao);
     
     // Set attribute pointers
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
-    glEnableVertexAttribArray(0);
+	int iPosAttr = glGetAttribLocation(program, "a_position");
+    glVertexAttribPointer(iPosAttr, // Attribute location
+						  2,		// Number of components
+						  GL_FLOAT, // Type of each component
+						  GL_FALSE, // Normalize?
+						  0,		// Stride
+						  0);		// Offset
+    glEnableVertexAttribArray(iPosAttr);
 }
 
 void RenderExample1()

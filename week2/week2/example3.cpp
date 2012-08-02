@@ -14,7 +14,7 @@
 static const GLfloat squareVertices[] = {
 	100.0f, 100.0f,
 	100.0f, 300.0f,
-	1280.0f, 300.0f,
+	300.0f, 300.0f,
 
 	300.0f, 300.0f,
 	300.0f, 100.0f,
@@ -62,13 +62,26 @@ void InitExample3()
     glBindVertexArray(vao);
     
     // Set attribute pointers
+	int iPosAttr = glGetAttribLocation(program, "a_position");
+	int iColAttr = glGetAttribLocation(program, "a_color");
+
 	glBindBuffer(GL_ARRAY_BUFFER, vboVerts);
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 0, 0);
-    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(iPosAttr,	// Attribute location
+						  2,		// Number of components
+						  GL_FLOAT, // Type of each component
+						  GL_FALSE, // Normalize?
+						  0,		// Stride
+						  0);		// Offset
+    glEnableVertexAttribArray(iPosAttr);
 
 	glBindBuffer(GL_ARRAY_BUFFER, vboColors);
-    glVertexAttribPointer(1, 4, GL_UNSIGNED_BYTE, GL_TRUE, 0, 0);
-    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(iColAttr,			// Attribute location
+						  4,				// Number of components
+						  GL_UNSIGNED_BYTE, // Type of each component
+						  GL_TRUE,			// Normalize?
+						  0,				// Stride
+						  0);				// Offset
+    glEnableVertexAttribArray(iColAttr);
 }
 
 void RenderExample3()

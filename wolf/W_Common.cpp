@@ -10,15 +10,6 @@
 namespace wolf
 {
 
-static const char* gs_aAttributeMap[wolf::AT_NUM_ATTRIBS] =
-{
-	"a_position",	//AT_Position = 0,
-	"a_color",		//AT_Color,
-    "a_uv1",		//AT_TexCoord1,
-	"a_normal",		//AT_Normal,
-	"a_tangent",	//AT_Tangent,
-};
-	
 //----------------------------------------------------------
 // Loads in a whole file and returns the contents. User is 
 // responsible for then delete[]-ing the data. Returns 0 if 
@@ -147,13 +138,7 @@ GLuint LoadShaders(const std::string& p_strVSFile, const std::string& p_strPSFil
     glAttachShader(uiProgram, uiVS);
     glAttachShader(uiProgram, uiPS);
     
-    // 5. Bind attribute locations. This needs to be done prior to linking.
-	for( int i = 0; i < wolf::AT_NUM_ATTRIBS; i++ )
-	{
-        glBindAttribLocation(uiProgram, i, gs_aAttributeMap[i]);
-	}
-    
-    // 6. Link program.
+    // 5. Link program.
     if( !LinkProgram(uiProgram) )
     {
         printf("Failed to link program: %d\n", uiProgram);
