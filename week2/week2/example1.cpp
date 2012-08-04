@@ -55,8 +55,7 @@ void RenderExample1()
     // Use shader program.
     glUseProgram(program);
     
-    glBindBuffer(GL_ARRAY_BUFFER, vbo);
-    glBindVertexArray(vao);
+	glBindVertexArray(vao);
     
     // Draw!
     glDrawArrays(GL_TRIANGLES, 0, 6);

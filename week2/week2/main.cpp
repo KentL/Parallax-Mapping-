@@ -10,7 +10,7 @@
 #include "W_Common.h"
 #include "examples.h"
 
-int g_iExample = 5;
+int g_iExample = 1;
 
 int main( void )
 {
