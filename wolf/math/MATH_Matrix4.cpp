@@ -254,7 +254,7 @@ Matrix4 Matrix4::GetInverse() const
     else
 	{
         /* Calculate inverse(A) = adj(A) / det(A) */
-        det_1 = 1.0 / det_1;
+        det_1 = 1.0f / det_1;
         mTmp.m[ 0] =   ( m[ 5] * m[10] - m[ 9] * m[ 6] ) * (float)det_1;
         mTmp.m[ 1] = - ( m[ 1] * m[10] - m[ 9] * m[ 2] ) * (float)det_1;
         mTmp.m[ 2] =   ( m[ 1] * m[ 6] - m[ 5] * m[ 2] ) * (float)det_1;

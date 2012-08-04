@@ -7,7 +7,7 @@
 #ifndef COMMON_H
 #define COMMON_H
 
-#include <GL/glfw.h>
+#include "W_Types.h"
 #include <string>
 
 namespace wolf

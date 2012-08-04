@@ -5,6 +5,7 @@
 #define GLFW_NO_GLU
 #include <stdio.h>
 #include <stdlib.h>
+#include <GL/glew.h>
 #include <GL/glfw.h>
 
 int main( void )
@@ -33,6 +34,8 @@ int main( void )
         exit( EXIT_FAILURE );
     }
     
+	glewInit();
+
     glfwSetWindowTitle( "Week 1" );
     
     // Ensure we can capture the escape key being pressed below

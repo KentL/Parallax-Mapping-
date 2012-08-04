@@ -51,7 +51,7 @@ int Vec3D::IntLength() const
 	int length;
 
 	length = this->IntLengthSquared();
-	length = sqrtf(static_cast<float>( length ));
+	length = static_cast<int>(sqrtf(static_cast<float>( length )));
 
 	return length;
 }
@@ -62,7 +62,7 @@ int Vec3D::IntLength() const
 int Vec3D::IntLengthSquared() const
 {
 	int length;
-	length = (((x) * (x)) + ((y) * (y) + ((z) * (z)) ));
+	length = static_cast<int>((((x) * (x)) + ((y) * (y) + ((z) * (z)) )));
 	return length;
 }
 
