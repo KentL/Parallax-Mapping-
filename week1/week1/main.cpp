@@ -5,7 +5,9 @@
 #define GLFW_NO_GLU
 #include <stdio.h>
 #include <stdlib.h>
+#ifndef __APPLE__
 #include <GL/glew.h>
+#endif
 #include <GL/glfw.h>
 
 int main( void )
@@ -34,8 +36,10 @@ int main( void )
         exit( EXIT_FAILURE );
     }
     
+#ifndef __APPLE__
 	glewInit();
-
+#endif
+    
     glfwSetWindowTitle( "Week 1" );
     
     // Ensure we can capture the escape key being pressed below

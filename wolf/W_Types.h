@@ -7,7 +7,9 @@
 #ifndef W_TYPES_H
 #define W_TYPES_H
 
+#ifndef __APPLE__
 #include <GL/glew.h>
+#endif
 #include <GL/glfw.h>
 
 namespace wolf
