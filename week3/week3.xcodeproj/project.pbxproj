@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E14BDC8415C5F4A800EBDCCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDC8315C5F4A800EBDCCE /* main.cpp */; };
+		E14BDC8D15C5F66900EBDCCE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC8C15C5F66900EBDCCE /* OpenGL.framework */; };
+		E14BDC8F15C5F68000EBDCCE /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC8E15C5F68000EBDCCE /* Quartz.framework */; };
+		E14BDC9115C5F69500EBDCCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC9015C5F69500EBDCCE /* Cocoa.framework */; };
+		E14BDC9515C5F6BF00EBDCCE /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC9415C5F6BF00EBDCCE /* IOKit.framework */; };
+		E14BDCA715C6C95300EBDCCE /* W_Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCA415C6C95300EBDCCE /* W_Common.cpp */; };
+		E14BDCAB15C8389700EBDCCE /* example1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCA815C8389700EBDCCE /* example1.cpp */; };
+		E14BDCB515C83A7F00EBDCCE /* MATH_Matrix3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCAE15C83A7F00EBDCCE /* MATH_Matrix3.cpp */; };
+		E14BDCB615C83A7F00EBDCCE /* MATH_Matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCB015C83A7F00EBDCCE /* MATH_Matrix4.cpp */; };
+		E14BDCB715C83A7F00EBDCCE /* MATH_Vec3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCB315C83A7F00EBDCCE /* MATH_Vec3D.cpp */; };
+		E14BDCBA15C83B5800EBDCCE /* W_Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCB815C83B5800EBDCCE /* W_Math.cpp */; };
+		E14BDCCF15CEE1A300EBDCCE /* example2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCCE15CEE1A300EBDCCE /* example2.cpp */; };
+		E14BDCD215CEF05200EBDCCE /* example3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCD115CEF05200EBDCCE /* example3.cpp */; };
+		E14BDCDD15D0AF4D00EBDCCE /* W_Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCD315D0AF4D00EBDCCE /* W_Buffer.cpp */; };
+		E14BDCDE15D0AF4D00EBDCCE /* W_IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCD515D0AF4D00EBDCCE /* W_IndexBuffer.cpp */; };
+		E14BDCDF15D0AF4D00EBDCCE /* W_Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCD715D0AF4D00EBDCCE /* W_Program.cpp */; };
+		E14BDCE015D0AF4D00EBDCCE /* W_VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCD915D0AF4D00EBDCCE /* W_VertexBuffer.cpp */; };
+		E14BDCE115D0AF4D00EBDCCE /* W_VertexDeclaration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCDB15D0AF4D00EBDCCE /* W_VertexDeclaration.cpp */; };
+		E14BDCE415D0B31B00EBDCCE /* example4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCE315D0B31B00EBDCCE /* example4.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E14BDC7D15C5F4A800EBDCCE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E14BDC7F15C5F4A800EBDCCE /* week3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = week3; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14BDC8315C5F4A800EBDCCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E14BDC8C15C5F66900EBDCCE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		E14BDC8E15C5F68000EBDCCE /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		E14BDC9015C5F69500EBDCCE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E14BDC9215C5F6A300EBDCCE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		E14BDC9415C5F6BF00EBDCCE /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		E14BDCA415C6C95300EBDCCE /* W_Common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_Common.cpp; sourceTree = "<group>"; };
+		E14BDCA515C6C95300EBDCCE /* W_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_Common.h; sourceTree = "<group>"; };
+		E14BDCA615C6C95300EBDCCE /* W_Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_Types.h; sourceTree = "<group>"; };
+		E14BDCA815C8389700EBDCCE /* example1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example1.cpp; sourceTree = "<group>"; };
+		E14BDCAA15C8389700EBDCCE /* examples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = examples.h; sourceTree = "<group>"; };
+		E14BDCAE15C83A7F00EBDCCE /* MATH_Matrix3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MATH_Matrix3.cpp; sourceTree = "<group>"; };
+		E14BDCAF15C83A7F00EBDCCE /* MATH_Matrix3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATH_Matrix3.h; sourceTree = "<group>"; };
+		E14BDCB015C83A7F00EBDCCE /* MATH_Matrix4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MATH_Matrix4.cpp; sourceTree = "<group>"; };
+		E14BDCB115C83A7F00EBDCCE /* MATH_Matrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATH_Matrix4.h; sourceTree = "<group>"; };
+		E14BDCB215C83A7F00EBDCCE /* MATH_Matrix4.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MATH_Matrix4.inl; sourceTree = "<group>"; };
+		E14BDCB315C83A7F00EBDCCE /* MATH_Vec3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MATH_Vec3D.cpp; sourceTree = "<group>"; };
+		E14BDCB415C83A7F00EBDCCE /* MATH_Vec3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATH_Vec3D.h; sourceTree = "<group>"; };
+		E14BDCB815C83B5800EBDCCE /* W_Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_Math.cpp; sourceTree = "<group>"; };
+		E14BDCB915C83B5800EBDCCE /* W_Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_Math.h; sourceTree = "<group>"; };
+		E14BDCCE15CEE1A300EBDCCE /* example2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example2.cpp; sourceTree = "<group>"; };
+		E14BDCD115CEF05200EBDCCE /* example3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example3.cpp; sourceTree = "<group>"; };
+		E14BDCD315D0AF4D00EBDCCE /* W_Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_Buffer.cpp; sourceTree = "<group>"; };
+		E14BDCD415D0AF4D00EBDCCE /* W_Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_Buffer.h; sourceTree = "<group>"; };
+		E14BDCD515D0AF4D00EBDCCE /* W_IndexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_IndexBuffer.cpp; sourceTree = "<group>"; };
+		E14BDCD615D0AF4D00EBDCCE /* W_IndexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_IndexBuffer.h; sourceTree = "<group>"; };
+		E14BDCD715D0AF4D00EBDCCE /* W_Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_Program.cpp; sourceTree = "<group>"; };
+		E14BDCD815D0AF4D00EBDCCE /* W_Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_Program.h; sourceTree = "<group>"; };
+		E14BDCD915D0AF4D00EBDCCE /* W_VertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_VertexBuffer.cpp; sourceTree = "<group>"; };
+		E14BDCDA15D0AF4D00EBDCCE /* W_VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_VertexBuffer.h; sourceTree = "<group>"; };
+		E14BDCDB15D0AF4D00EBDCCE /* W_VertexDeclaration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_VertexDeclaration.cpp; sourceTree = "<group>"; };
+		E14BDCDC15D0AF4D00EBDCCE /* W_VertexDeclaration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_VertexDeclaration.h; sourceTree = "<group>"; };
+		E14BDCE315D0B31B00EBDCCE /* example4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example4.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E14BDC7C15C5F4A800EBDCCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14BDC9515C5F6BF00EBDCCE /* IOKit.framework in Frameworks */,
+				E14BDC9115C5F69500EBDCCE /* Cocoa.framework in Frameworks */,
+				E14BDC8F15C5F68000EBDCCE /* Quartz.framework in Frameworks */,
+				E14BDC8D15C5F66900EBDCCE /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E14BDC7415C5F4A800EBDCCE = {
+			isa = PBXGroup;
+			children = (
+				E14BDCA315C6C95300EBDCCE /* wolf */,
+				E14BDC9A15C626CE00EBDCCE /* Frameworks */,
+				E14BDC8215C5F4A800EBDCCE /* week3 */,
+				E14BDC8015C5F4A800EBDCCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E14BDC8015C5F4A800EBDCCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E14BDC7F15C5F4A800EBDCCE /* week3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E14BDC8215C5F4A800EBDCCE /* week3 */ = {
+			isa = PBXGroup;
+			children = (
+				E14BDCA815C8389700EBDCCE /* example1.cpp */,
+				E14BDCCE15CEE1A300EBDCCE /* example2.cpp */,
+				E14BDCD115CEF05200EBDCCE /* example3.cpp */,
+				E14BDCE315D0B31B00EBDCCE /* example4.cpp */,
+				E14BDCAA15C8389700EBDCCE /* examples.h */,
+				E14BDC8315C5F4A800EBDCCE /* main.cpp */,
+			);
+			path = week3;
+			sourceTree = "<group>";
+		};
+		E14BDC9A15C626CE00EBDCCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E14BDC9415C5F6BF00EBDCCE /* IOKit.framework */,
+				E14BDC9215C5F6A300EBDCCE /* CoreFoundation.framework */,
+				E14BDC9015C5F69500EBDCCE /* Cocoa.framework */,
+				E14BDC8E15C5F68000EBDCCE /* Quartz.framework */,
+				E14BDC8C15C5F66900EBDCCE /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E14BDCA315C6C95300EBDCCE /* wolf */ = {
+			isa = PBXGroup;
+			children = (
+				E14BDCAD15C83A7F00EBDCCE /* math */,
+				E14BDCA415C6C95300EBDCCE /* W_Common.cpp */,
+				E14BDCA515C6C95300EBDCCE /* W_Common.h */,
+				E14BDCB815C83B5800EBDCCE /* W_Math.cpp */,
+				E14BDCB915C83B5800EBDCCE /* W_Math.h */,
+				E14BDCA615C6C95300EBDCCE /* W_Types.h */,
+				E14BDCD315D0AF4D00EBDCCE /* W_Buffer.cpp */,
+				E14BDCD415D0AF4D00EBDCCE /* W_Buffer.h */,
+				E14BDCD515D0AF4D00EBDCCE /* W_IndexBuffer.cpp */,
+				E14BDCD615D0AF4D00EBDCCE /* W_IndexBuffer.h */,
+				E14BDCD715D0AF4D00EBDCCE /* W_Program.cpp */,
+				E14BDCD815D0AF4D00EBDCCE /* W_Program.h */,
+				E14BDCD915D0AF4D00EBDCCE /* W_VertexBuffer.cpp */,
+				E14BDCDA15D0AF4D00EBDCCE /* W_VertexBuffer.h */,
+				E14BDCDB15D0AF4D00EBDCCE /* W_VertexDeclaration.cpp */,
+				E14BDCDC15D0AF4D00EBDCCE /* W_VertexDeclaration.h */,
+			);
+			name = wolf;
+			path = ../wolf;
+			sourceTree = "<group>";
+		};
+		E14BDCAD15C83A7F00EBDCCE /* math */ = {
+			isa = PBXGroup;
+			children = (
+				E14BDCAE15C83A7F00EBDCCE /* MATH_Matrix3.cpp */,
+				E14BDCAF15C83A7F00EBDCCE /* MATH_Matrix3.h */,
+				E14BDCB015C83A7F00EBDCCE /* MATH_Matrix4.cpp */,
+				E14BDCB115C83A7F00EBDCCE /* MATH_Matrix4.h */,
+				E14BDCB215C83A7F00EBDCCE /* MATH_Matrix4.inl */,
+				E14BDCB315C83A7F00EBDCCE /* MATH_Vec3D.cpp */,
+				E14BDCB415C83A7F00EBDCCE /* MATH_Vec3D.h */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E14BDC7E15C5F4A800EBDCCE /* week3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14BDC8915C5F4A800EBDCCE /* Build configuration list for PBXNativeTarget "week3" */;
+			buildPhases = (
+				E14BDC7B15C5F4A800EBDCCE /* Sources */,
+				E14BDC7C15C5F4A800EBDCCE /* Frameworks */,
+				E14BDC7D15C5F4A800EBDCCE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = week3;
+			productName = week3;
+			productReference = E14BDC7F15C5F4A800EBDCCE /* week3 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E14BDC7615C5F4A800EBDCCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E14BDC7915C5F4A800EBDCCE /* Build configuration list for PBXProject "week3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E14BDC7415C5F4A800EBDCCE;
+			productRefGroup = E14BDC8015C5F4A800EBDCCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E14BDC7E15C5F4A800EBDCCE /* week3 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E14BDC7B15C5F4A800EBDCCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14BDC8415C5F4A800EBDCCE /* main.cpp in Sources */,
+				E14BDCA715C6C95300EBDCCE /* W_Common.cpp in Sources */,
+				E14BDCAB15C8389700EBDCCE /* example1.cpp in Sources */,
+				E14BDCB515C83A7F00EBDCCE /* MATH_Matrix3.cpp in Sources */,
+				E14BDCB615C83A7F00EBDCCE /* MATH_Matrix4.cpp in Sources */,
+				E14BDCB715C83A7F00EBDCCE /* MATH_Vec3D.cpp in Sources */,
+				E14BDCBA15C83B5800EBDCCE /* W_Math.cpp in Sources */,
+				E14BDCCF15CEE1A300EBDCCE /* example2.cpp in Sources */,
+				E14BDCD215CEF05200EBDCCE /* example3.cpp in Sources */,
+				E14BDCDD15D0AF4D00EBDCCE /* W_Buffer.cpp in Sources */,
+				E14BDCDE15D0AF4D00EBDCCE /* W_IndexBuffer.cpp in Sources */,
+				E14BDCDF15D0AF4D00EBDCCE /* W_Program.cpp in Sources */,
+				E14BDCE015D0AF4D00EBDCCE /* W_VertexBuffer.cpp in Sources */,
+				E14BDCE115D0AF4D00EBDCCE /* W_VertexDeclaration.cpp in Sources */,
+				E14BDCE415D0B31B00EBDCCE /* example4.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E14BDC8715C5F4A800EBDCCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E14BDC8815C5F4A800EBDCCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E14BDC8A15C5F4A800EBDCCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-lglfw",
+					"-L/usr/local/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E14BDC8B15C5F4A800EBDCCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-lglfw",
+					"-L/usr/local/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E14BDC7915C5F4A800EBDCCE /* Build configuration list for PBXProject "week3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14BDC8715C5F4A800EBDCCE /* Debug */,
+				E14BDC8815C5F4A800EBDCCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E14BDC8915C5F4A800EBDCCE /* Build configuration list for PBXNativeTarget "week3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14BDC8A15C5F4A800EBDCCE /* Debug */,
+				E14BDC8B15C5F4A800EBDCCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E14BDC7615C5F4A800EBDCCE /* Project object */;
+}

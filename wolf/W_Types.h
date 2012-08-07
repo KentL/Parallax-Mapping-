@@ -7,6 +7,8 @@
 #ifndef W_TYPES_H
 #define W_TYPES_H
 
+#define GLFW_INCLUDE_GL3
+#define GLFW_NO_GLU
 #ifndef __APPLE__
 #include <GL/glew.h>
 #endif

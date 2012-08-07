@@ -30,6 +30,10 @@ static GLuint vao = 0;
 void InitExample1()
 {
     program = wolf::LoadShaders("data/week2/example1.vsh", "data/week2/example1.fsh");
+
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
+    
     glGenBuffers(1, &vbo);
     glBindBuffer(GL_ARRAY_BUFFER, vbo);
     
@@ -37,9 +41,6 @@ void InitExample1()
                  8 * 6,  // The total size of the buffer, in bytes
                  squareVertices, // Pointer to the data to copy over to VRAM
                  GL_STATIC_DRAW); // Hint to the driver for how it’ll be used.
-    
-    glGenVertexArrays(1, &vao);
-    glBindVertexArray(vao);
     
     // Set attribute pointers
 	int iPosAttr = glGetAttribLocation(program, "a_position");

@@ -35,6 +35,9 @@ void InitExample5()
 {
     program = wolf::LoadShaders("data/week2/example5.vsh", "data/week2/example5.fsh");
 
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
+    
 	// Create VBO for vertices
     glGenBuffers(1, &vboVerts);
     glBindBuffer(GL_ARRAY_BUFFER, vboVerts);
@@ -52,9 +55,6 @@ void InitExample5()
                  4 * 3,  // The total size of the buffer, in bytes
                  triangleColors, // Pointer to the data to copy over to VRAM
                  GL_STATIC_DRAW); // Hint to the driver for how it’ll be used.
-    
-    glGenVertexArrays(1, &vao);
-    glBindVertexArray(vao);
     
     // Set attribute pointers
 	int iPosAttr = glGetAttribLocation(program, "a_position");
