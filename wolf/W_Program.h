@@ -9,7 +9,6 @@
 #define W_PROGRAM_H
 
 #include "W_Types.h"
-#include <glm/glm.hpp>
 #include <string>
 
 namespace wolf

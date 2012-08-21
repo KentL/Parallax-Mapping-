@@ -6,7 +6,6 @@
 //-----------------------------------------------------------------------------
 #include "W_Program.h"
 #include "W_Common.h"
-#include <glm/gtc/type_ptr.hpp>
 
 namespace wolf
 {
@@ -103,7 +102,6 @@ void Program::Bind()
 //----------------------------------------------------------
 // Sets a matrix uniform of the given name
 //----------------------------------------------------------
-//void Program::SetUniform(const char* p_strName, const math::Matrix4& p_m)
 void Program::SetUniform(const char* p_strName, const glm::mat4& p_m)
 {
 	int iLoc = glGetUniformLocation(m_uiProgram,p_strName);
