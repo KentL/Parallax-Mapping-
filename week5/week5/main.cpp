@@ -12,7 +12,7 @@
 #include "W_Common.h"
 #include "examples.h"
 
-int g_iExample = 4;
+int g_iExample = 1;
 
 int main( void )
 {

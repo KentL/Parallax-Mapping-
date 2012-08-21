@@ -32,7 +32,7 @@ static const Vertex squareVertices[] = {
 	{ 100.0f, 100.0,	0, 1 }, 
 };
 
-#define TEX 0
+#define TEX 1
 
 #if TEX == 0
 

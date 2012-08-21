@@ -69,13 +69,13 @@ void VertexDeclaration::End()
 
 	// Work out total size of vertex
 	int iVertSize = 0;
-	for(int i = 0; i < m_attrs.size(); i++)
+	for(unsigned int i = 0; i < m_attrs.size(); i++)
 	{
 		iVertSize += m_attrs[i].m_iNumComponents * g_aSizeMap[ m_attrs[i].m_type ];
 	}
 
 	int iOfs = 0;
-	for(int i = 0; i < m_attrs.size(); i++)
+	for(unsigned int i = 0; i < m_attrs.size(); i++)
 	{
 		const AttributeInfo& info = m_attrs[i];
 		glVertexAttribPointer(info.m_attr,
