@@ -13,6 +13,10 @@
 #include <GL/glew.h>
 #endif
 #include <GL/glfw.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtx/transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 namespace wolf
 {
@@ -42,6 +46,12 @@ struct Color4
 	Color4(float p_fR, float p_fG, float p_fB, float p_fA) : r(p_fR), g(p_fG), b(p_fB), a(p_fA) {}
 };
 
+#ifndef PI
+#define PI		3.141592653589793238f
+#endif
+    
+#define DEG_TO_RAD(d)  (((d)/180.0f)*PI)
+    
 }
 
 #endif

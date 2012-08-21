@@ -168,4 +168,16 @@ GLuint LoadShaders(const std::string& p_strVSFile, const std::string& p_strPSFil
     return uiProgram;
 }
 
+bool LoadTGA(const std::string& p_strFile, unsigned int* p_uiWidth, unsigned int* p_uiHeight, unsigned char** p_ppData)
+{
+	GLFWimage img;
+	if( GL_FALSE == glfwReadImage( p_strFile.c_str(), &img, 0 ) )
+		return false;
+
+	*p_uiWidth = img.Width;
+	*p_uiHeight = img.Height;
+	*p_ppData = img.Data;
+	return true;
+}
+
 }

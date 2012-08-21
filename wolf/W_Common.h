@@ -18,6 +18,8 @@ void* LoadWholeFile(const std::string& p_strFile);
 
 // Loads in a vertex and pixel shader and combines them into a program
 GLuint LoadShaders(const std::string& p_strVSFile, const std::string& p_strPSFile);
+
+bool LoadTGA(const std::string& p_strFile, unsigned int* p_uiWidth, unsigned int* p_uiHeight, unsigned char** p_ppData);
 }
 
 #endif

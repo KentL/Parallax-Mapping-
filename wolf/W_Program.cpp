@@ -6,6 +6,7 @@
 //-----------------------------------------------------------------------------
 #include "W_Program.h"
 #include "W_Common.h"
+#include <glm/gtc/type_ptr.hpp>
 
 namespace wolf
 {
@@ -102,7 +103,8 @@ void Program::Bind()
 //----------------------------------------------------------
 // Sets a matrix uniform of the given name
 //----------------------------------------------------------
-void Program::SetUniform(const char* p_strName, const math::Matrix4& p_m)
+//void Program::SetUniform(const char* p_strName, const math::Matrix4& p_m)
+void Program::SetUniform(const char* p_strName, const glm::mat4& p_m)
 {
 	int iLoc = glGetUniformLocation(m_uiProgram,p_strName);
 	if( iLoc == -1 )
@@ -110,13 +112,13 @@ void Program::SetUniform(const char* p_strName, const math::Matrix4& p_m)
 		//printf("WARNING: Unknown uniform %s\n", p_strName);
 		return;
 	}
-	glUniformMatrix4fv(iLoc, 1, GL_FALSE, (GLfloat*)&p_m);
+	glUniformMatrix4fv(iLoc, 1, GL_FALSE, glm::value_ptr(p_m));
 }
 
 //----------------------------------------------------------
 // Sets a matrix uniform of the given name
 //----------------------------------------------------------
-void Program::SetUniform(const char* p_strName, const math::Matrix3& p_m)
+void Program::SetUniform(const char* p_strName, const glm::mat3& p_m)
 {
 	int iLoc = glGetUniformLocation(m_uiProgram,p_strName);
 	if( iLoc == -1 )
@@ -124,13 +126,13 @@ void Program::SetUniform(const char* p_strName, const math::Matrix3& p_m)
 		//printf("WARNING: Unknown uniform %s\n", p_strName);
 		return;
 	}
-	glUniformMatrix3fv(iLoc, 1, GL_FALSE, (GLfloat*)&p_m);
+	glUniformMatrix3fv(iLoc, 1, GL_FALSE, glm::value_ptr(p_m));
 }
 
 //----------------------------------------------------------
 // Sets a vector uniform of the given name
 //----------------------------------------------------------
-void Program::SetUniform(const char* p_strName, const math::Vec3D& p_v)
+void Program::SetUniform(const char* p_strName, const glm::vec3& p_v)
 {
 	int iLoc = glGetUniformLocation(m_uiProgram,p_strName);
 	if( iLoc == -1 )
@@ -138,7 +140,7 @@ void Program::SetUniform(const char* p_strName, const math::Vec3D& p_v)
 		//printf("WARNING: Unknown uniform %s\n", p_strName);
 		return;
 	}
-	glUniform3fv(iLoc, 1, (GLfloat*)&p_v);
+	glUniform3fv(iLoc, 1, glm::value_ptr(p_v));
 }
 
 //----------------------------------------------------------

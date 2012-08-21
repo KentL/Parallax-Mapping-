@@ -1,5 +1,5 @@
 //========================================================================
-// Week 3 - Buffers and Attributes
+// Creates a GL 3.2 720p window and clears it
 //========================================================================
 #define GLFW_INCLUDE_GL3
 #define GLFW_NO_GLU
@@ -9,10 +9,6 @@
 #include <GL/glew.h>
 #endif
 #include <GL/glfw.h>
-#include "W_Common.h"
-#include "examples.h"
-
-int g_iExample = 4;
 
 int main( void )
 {
@@ -32,7 +28,7 @@ int main( void )
     glfwOpenWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     
     // Open a window and create its OpenGL context
-    if( !glfwOpenWindow( 1280, 720, 0,0,0,0, 24,0, GLFW_WINDOW ) )
+    if( !glfwOpenWindow( 1280, 720, 0,0,0,0, 0,0, GLFW_WINDOW ) )
     {
         fprintf( stderr, "Failed to open GLFW window\n" );
         
@@ -43,8 +39,8 @@ int main( void )
 #ifndef __APPLE__
 	glewInit();
 #endif
-
-    glfwSetWindowTitle( "Week 2" );
+    
+    glfwSetWindowTitle( "Week 3" );
     
     // Ensure we can capture the escape key being pressed below
     glfwEnable( GLFW_STICKY_KEYS );
@@ -52,14 +48,6 @@ int main( void )
     // Enable vertical sync (on cards that support it)
     glfwSwapInterval( 1 );
     
-	switch( g_iExample )
-	{
-		case 1: InitExample1(); break;
-		case 2: InitExample2(); break;
-		case 3: InitExample3(); break;
-		case 4: InitExample4(); break;
-	}
-
     do
     {
         t = glfwGetTime();
@@ -75,16 +63,8 @@ int main( void )
         
         // Clear color buffer to black
         glClearColor( 0.4f, 0.4f, 0.4f, 0.0f );
-        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+        glClear( GL_COLOR_BUFFER_BIT );
         
-		switch( g_iExample )
-		{
-			case 1: RenderExample1(); break;
-			case 2: RenderExample2(); break;
-			case 3: RenderExample3(); break;
-			case 4: RenderExample4(); break;
-		}
-
         // Swap buffers
         glfwSwapBuffers();
         
@@ -97,5 +77,4 @@ int main( void )
     
     exit( EXIT_SUCCESS );
 }
-
 

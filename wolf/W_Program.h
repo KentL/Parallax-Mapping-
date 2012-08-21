@@ -9,7 +9,7 @@
 #define W_PROGRAM_H
 
 #include "W_Types.h"
-#include "MATH_Matrix4.h"
+#include <glm/glm.hpp>
 #include <string>
 
 namespace wolf
@@ -24,9 +24,10 @@ class Program
 		virtual ~Program();
 		
 		void Bind();
-		void SetUniform(const char* p_strName, const math::Matrix4& p_m);
-		void SetUniform(const char* p_strName, const math::Matrix3& p_m);
-		void SetUniform(const char* p_strName, const math::Vec3D& p_v);
+		//void SetUniform(const char* p_strName, const math::Matrix4& p_m);
+        void SetUniform(const char* p_strName, const glm::mat4& p_m);
+        void SetUniform(const char* p_strName, const glm::mat3& p_m);
+        void SetUniform(const char* p_strName, const glm::vec3& p_v);
 		void SetUniform(const char* p_strName, const wolf::Color4& p_c);
 		void SetUniform(const char* p_strName, int p_i);
 		void SetUniform(const char* p_strName, float p_f);

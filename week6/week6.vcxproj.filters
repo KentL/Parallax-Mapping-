@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="week6\example1.cpp" />
+    <ClCompile Include="week6\main.cpp" />
+    <ClCompile Include="..\wolf\W_Common.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\W_Math.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\math\MATH_Matrix3.cpp">
+      <Filter>wolf\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\math\MATH_Matrix4.cpp">
+      <Filter>wolf\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\math\MATH_Vec3D.cpp">
+      <Filter>wolf\math</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="week6\examples.h" />
+    <ClInclude Include="..\wolf\W_Common.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_Math.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_Types.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\math\MATH_Matrix3.h">
+      <Filter>wolf\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\math\MATH_Matrix4.h">
+      <Filter>wolf\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\math\MATH_Vec3D.h">
+      <Filter>wolf\math</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="wolf">
+      <UniqueIdentifier>{3c684ae4-ebd7-4333-a9db-381b9b70d2e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wolf\math">
+      <UniqueIdentifier>{1cc555b2-2e18-42e5-98b8-1af7dea6d426}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\wolf\math\MATH_Matrix4.inl">
+      <Filter>wolf\math</Filter>
+    </None>
+  </ItemGroup>
+</Project>
