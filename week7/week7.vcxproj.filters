@@ -6,17 +6,24 @@
     <ClCompile Include="..\wolf\W_Common.cpp">
       <Filter>wolf</Filter>
     </ClCompile>
-    <ClCompile Include="..\wolf\W_Math.cpp">
+    <ClCompile Include="week7\example2.cpp" />
+    <ClCompile Include="week7\example3.cpp" />
+    <ClCompile Include="week7\example4.cpp" />
+    <ClCompile Include="week7\example5.cpp" />
+    <ClCompile Include="..\wolf\W_Buffer.cpp">
       <Filter>wolf</Filter>
     </ClCompile>
-    <ClCompile Include="..\wolf\math\MATH_Matrix3.cpp">
-      <Filter>wolf\math</Filter>
+    <ClCompile Include="..\wolf\W_IndexBuffer.cpp">
+      <Filter>wolf</Filter>
     </ClCompile>
-    <ClCompile Include="..\wolf\math\MATH_Matrix4.cpp">
-      <Filter>wolf\math</Filter>
+    <ClCompile Include="..\wolf\W_Program.cpp">
+      <Filter>wolf</Filter>
     </ClCompile>
-    <ClCompile Include="..\wolf\math\MATH_Vec3D.cpp">
-      <Filter>wolf\math</Filter>
+    <ClCompile Include="..\wolf\W_VertexBuffer.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\W_VertexDeclaration.cpp">
+      <Filter>wolf</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -24,33 +31,28 @@
     <ClInclude Include="..\wolf\W_Common.h">
       <Filter>wolf</Filter>
     </ClInclude>
-    <ClInclude Include="..\wolf\W_Math.h">
-      <Filter>wolf</Filter>
-    </ClInclude>
     <ClInclude Include="..\wolf\W_Types.h">
       <Filter>wolf</Filter>
     </ClInclude>
-    <ClInclude Include="..\wolf\math\MATH_Matrix3.h">
-      <Filter>wolf\math</Filter>
+    <ClInclude Include="..\wolf\W_Buffer.h">
+      <Filter>wolf</Filter>
     </ClInclude>
-    <ClInclude Include="..\wolf\math\MATH_Matrix4.h">
-      <Filter>wolf\math</Filter>
+    <ClInclude Include="..\wolf\W_IndexBuffer.h">
+      <Filter>wolf</Filter>
     </ClInclude>
-    <ClInclude Include="..\wolf\math\MATH_Vec3D.h">
-      <Filter>wolf\math</Filter>
+    <ClInclude Include="..\wolf\W_Program.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_VertexBuffer.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_VertexDeclaration.h">
+      <Filter>wolf</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="wolf">
       <UniqueIdentifier>{3c684ae4-ebd7-4333-a9db-381b9b70d2e1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="wolf\math">
-      <UniqueIdentifier>{1cc555b2-2e18-42e5-98b8-1af7dea6d426}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\wolf\math\MATH_Matrix4.inl">
-      <Filter>wolf\math</Filter>
-    </None>
   </ItemGroup>
 </Project>

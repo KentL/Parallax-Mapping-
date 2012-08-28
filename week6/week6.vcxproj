@@ -51,8 +51,8 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <AdditionalIncludeDirectories>C:\Projects\UPEI\graphics-1-code\glfw\include;C:\Projects\UPEI\graphics-1-code\glew\include;C:\Projects\UPEI\graphics-1-code\wolf;C:\Projects\UPEI\graphics-1-code\wolf\math;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\glfw\include;$(SolutionDir)..\glew\include;$(SolutionDir)..\wolf;$(SolutionDir)..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -78,25 +78,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\wolf\math\MATH_Matrix3.cpp" />
-    <ClCompile Include="..\wolf\math\MATH_Matrix4.cpp" />
-    <ClCompile Include="..\wolf\math\MATH_Vec3D.cpp" />
+    <ClCompile Include="..\wolf\W_Buffer.cpp" />
     <ClCompile Include="..\wolf\W_Common.cpp" />
-    <ClCompile Include="..\wolf\W_Math.cpp" />
+    <ClCompile Include="..\wolf\W_IndexBuffer.cpp" />
+    <ClCompile Include="..\wolf\W_Program.cpp" />
+    <ClCompile Include="..\wolf\W_VertexBuffer.cpp" />
+    <ClCompile Include="..\wolf\W_VertexDeclaration.cpp" />
     <ClCompile Include="week6\example1.cpp" />
+    <ClCompile Include="week6\example2.cpp" />
+    <ClCompile Include="week6\example3.cpp" />
     <ClCompile Include="week6\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\wolf\math\MATH_Matrix3.h" />
-    <ClInclude Include="..\wolf\math\MATH_Matrix4.h" />
-    <ClInclude Include="..\wolf\math\MATH_Vec3D.h" />
+    <ClInclude Include="..\wolf\W_Buffer.h" />
     <ClInclude Include="..\wolf\W_Common.h" />
-    <ClInclude Include="..\wolf\W_Math.h" />
+    <ClInclude Include="..\wolf\W_IndexBuffer.h" />
+    <ClInclude Include="..\wolf\W_Program.h" />
     <ClInclude Include="..\wolf\W_Types.h" />
+    <ClInclude Include="..\wolf\W_VertexBuffer.h" />
+    <ClInclude Include="..\wolf\W_VertexDeclaration.h" />
     <ClInclude Include="week6\examples.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\wolf\math\MATH_Matrix4.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
