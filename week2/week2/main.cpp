@@ -1,5 +1,5 @@
 //========================================================================
-// Week 7 - Textures Part 2
+// Week 2 - Transformations
 //========================================================================
 #define GLFW_INCLUDE_GL3
 #define GLFW_NO_GLU
@@ -11,9 +11,9 @@
 #include <GL/glfw.h>
 #include "W_Common.h"
 #include "examples.h"
-#include <glm/glm.hpp>
 
-int g_iExample = 6;
+//#define EXAMPLE_2D
+#define EXAMPLE_3D
 
 int main( void )
 {
@@ -45,7 +45,7 @@ int main( void )
 	glewInit();
 #endif
 
-    glfwSetWindowTitle( "Week 7" );
+    glfwSetWindowTitle( "Week 4" );
     
     // Ensure we can capture the escape key being pressed below
     glfwEnable( GLFW_STICKY_KEYS );
@@ -53,15 +53,11 @@ int main( void )
     // Enable vertical sync (on cards that support it)
     glfwSwapInterval( 1 );
     
-	switch( g_iExample )
-	{
-		case 1: InitExample1(); break;
-		case 2: InitExample2(); break;
-		case 3: InitExample3(); break;
-		case 4: InitExample4(); break;
-		case 5: InitExample5(); break;
-		case 6: InitExample6(); break;
-	}
+#if defined(EXAMPLE_2D)
+	InitExample2D();
+#elif defined(EXAMPLE_3D)
+	InitExample3D();
+#endif
 
     do
     {
@@ -80,15 +76,11 @@ int main( void )
         glClearColor( 0.4f, 0.4f, 0.4f, 0.0f );
         glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         
-		switch( g_iExample )
-		{
-			case 1: RenderExample1(); break;
-			case 2: RenderExample2(); break;
-			case 3: RenderExample3(); break;
-			case 4: RenderExample4(); break;
-			case 5: RenderExample5(); break;
-			case 6: RenderExample6(); break;
-		}
+#if defined(EXAMPLE_2D)
+		RenderExample2D();
+#elif defined(EXAMPLE_3D)
+		RenderExample3D();
+#endif
 
         // Swap buffers
         glfwSwapBuffers();
@@ -102,5 +94,4 @@ int main( void )
     
     exit( EXIT_SUCCESS );
 }
-
 

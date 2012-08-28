@@ -1,7 +1,7 @@
 //========================================================================
 // Week 7 - Textures Part 2
 //
-// Example 5: RGBA 565
+// Example 6: DDS files
 //========================================================================
 #define GLFW_INCLUDE_GL3
 #define GLFW_NO_GLU
@@ -32,35 +32,16 @@ static const Vertex squareVertices[] = {
 	{ 100.0f, 100.0,	0, 1 }, 
 };
 
-#define TEX 1
-
-#if TEX == 0
-
-static GLushort g_aTexture[] =
-{
-     0x001f,  // blue
-     0xffe0, // yellow
-     0xf800,  // red
-     0x07e0,  // green
-};
-
-#else
-
-static GLushort g_aTexture[64*64];
-
-#endif
-
-
 static wolf::VertexBuffer* g_pVB = 0;
 static wolf::VertexDeclaration* g_pDecl = 0;
 static wolf::Program* g_pProgram = 0;
 static GLuint tex;
 
-void InitExample5()
+void InitExample6()
 {
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     
-    g_pProgram = new wolf::Program("data/week6/one_texture.vsh", "data/week6/one_texture.fsh");
+    g_pProgram = new wolf::Program("data/week6/with_world.vsh", "data/week6/with_world.fsh");
     g_pVB = new wolf::VertexBuffer(squareVertices, sizeof(Vertex) * 6);
 
 	g_pDecl = new wolf::VertexDeclaration();
@@ -70,37 +51,37 @@ void InitExample5()
 	g_pDecl->SetVertexBuffer(g_pVB);
 	g_pDecl->End();
 
-	glGenTextures(1, &tex);
+    //tex = wolf::CreateTextureFromDDS("data/week7/metal.dds");
+
+	glGenTextures(1,&tex);
 	glBindTexture(GL_TEXTURE_2D, tex);
+	GLFWimage img;
+	glfwReadImage( "data/week7/metal.tga", &img, 0 );
+	glTexImage2D(GL_TEXTURE_2D, 0, img.Format, img.Width, img.Height, 0, img.Format, GL_UNSIGNED_BYTE, img.Data);
+	glfwFreeImage(&img);
 
-#if TEX == 0
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 2, 2, 0,	GL_RGB, GL_UNSIGNED_SHORT_5_6_5, g_aTexture);
-#else
-	for( int v = 0; v < 64; v++ )
-	{
-		for( int u = 0; u < 64; u++ )
-		{
-			g_aTexture[v*64 + u] = v<<5;
-		}
-	}
-
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, 64, 64, 0,	GL_RGB, GL_UNSIGNED_SHORT_5_6_5, g_aTexture);
-#endif
-
-	// These two lines are explained soon!
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 }
 
-void RenderExample5()
+void RenderExample6()
 {
     glm::mat4 mProj = glm::ortho(0.0f,1280.0f,720.0f,0.0f,0.0f,1000.0f);
+
+	static float s_fScale = 1.0f;
+	s_fScale -= 0.01f;
+	if( s_fScale <= 0 )
+		s_fScale = 1.0f;
+
+    s_fScale = 1.0f;
+	glm::mat4 mWorld = glm::scale(s_fScale,s_fScale,s_fScale);
     
     // Use shader program.
 	g_pProgram->Bind();
     
 	// Bind Uniforms
     g_pProgram->SetUniform("projection", mProj);
+    g_pProgram->SetUniform("world", mWorld);
     g_pProgram->SetUniform("texture", 0);
     
 	// Set up source data
@@ -109,5 +90,6 @@ void RenderExample5()
     // Draw!
 	glDrawArrays(GL_TRIANGLES, 0, 6);
 }
+
 
 

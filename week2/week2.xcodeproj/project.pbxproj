@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E14BDC8415C5F4A800EBDCCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDC8315C5F4A800EBDCCE /* main.cpp */; };
+		E14BDC8D15C5F66900EBDCCE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC8C15C5F66900EBDCCE /* OpenGL.framework */; };
+		E14BDC8F15C5F68000EBDCCE /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC8E15C5F68000EBDCCE /* Quartz.framework */; };
+		E14BDC9115C5F69500EBDCCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC9015C5F69500EBDCCE /* Cocoa.framework */; };
+		E14BDC9515C5F6BF00EBDCCE /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC9415C5F6BF00EBDCCE /* IOKit.framework */; };
+		E14BDD2015E53A4100EBDCCE /* 2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD1D15E53A4100EBDCCE /* 2d.cpp */; };
+		E14BDD2115E53A4100EBDCCE /* 3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD1E15E53A4100EBDCCE /* 3d.cpp */; };
+		E14BDD3115E53A6200EBDCCE /* W_Buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD2415E53A6200EBDCCE /* W_Buffer.cpp */; };
+		E14BDD3215E53A6200EBDCCE /* W_Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD2615E53A6200EBDCCE /* W_Common.cpp */; };
+		E14BDD3315E53A6200EBDCCE /* W_IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD2815E53A6200EBDCCE /* W_IndexBuffer.cpp */; };
+		E14BDD3415E53A6200EBDCCE /* W_Program.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD2A15E53A6200EBDCCE /* W_Program.cpp */; };
+		E14BDD3515E53A6200EBDCCE /* W_VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD2D15E53A6200EBDCCE /* W_VertexBuffer.cpp */; };
+		E14BDD3615E53A6200EBDCCE /* W_VertexDeclaration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD2F15E53A6200EBDCCE /* W_VertexDeclaration.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E14BDC7D15C5F4A800EBDCCE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E14BDC7F15C5F4A800EBDCCE /* week2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = week2; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14BDC8315C5F4A800EBDCCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E14BDC8C15C5F66900EBDCCE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		E14BDC8E15C5F68000EBDCCE /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		E14BDC9015C5F69500EBDCCE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E14BDC9215C5F6A300EBDCCE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		E14BDC9415C5F6BF00EBDCCE /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		E14BDD1D15E53A4100EBDCCE /* 2d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 2d.cpp; sourceTree = "<group>"; };
+		E14BDD1E15E53A4100EBDCCE /* 3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = 3d.cpp; sourceTree = "<group>"; };
+		E14BDD1F15E53A4100EBDCCE /* examples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = examples.h; sourceTree = "<group>"; };
+		E14BDD2415E53A6200EBDCCE /* W_Buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = W_Buffer.cpp; path = ../wolf/W_Buffer.cpp; sourceTree = "<group>"; };
+		E14BDD2515E53A6200EBDCCE /* W_Buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_Buffer.h; path = ../wolf/W_Buffer.h; sourceTree = "<group>"; };
+		E14BDD2615E53A6200EBDCCE /* W_Common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = W_Common.cpp; path = ../wolf/W_Common.cpp; sourceTree = "<group>"; };
+		E14BDD2715E53A6200EBDCCE /* W_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_Common.h; path = ../wolf/W_Common.h; sourceTree = "<group>"; };
+		E14BDD2815E53A6200EBDCCE /* W_IndexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = W_IndexBuffer.cpp; path = ../wolf/W_IndexBuffer.cpp; sourceTree = "<group>"; };
+		E14BDD2915E53A6200EBDCCE /* W_IndexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_IndexBuffer.h; path = ../wolf/W_IndexBuffer.h; sourceTree = "<group>"; };
+		E14BDD2A15E53A6200EBDCCE /* W_Program.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = W_Program.cpp; path = ../wolf/W_Program.cpp; sourceTree = "<group>"; };
+		E14BDD2B15E53A6200EBDCCE /* W_Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_Program.h; path = ../wolf/W_Program.h; sourceTree = "<group>"; };
+		E14BDD2C15E53A6200EBDCCE /* W_Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_Types.h; path = ../wolf/W_Types.h; sourceTree = "<group>"; };
+		E14BDD2D15E53A6200EBDCCE /* W_VertexBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = W_VertexBuffer.cpp; path = ../wolf/W_VertexBuffer.cpp; sourceTree = "<group>"; };
+		E14BDD2E15E53A6200EBDCCE /* W_VertexBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_VertexBuffer.h; path = ../wolf/W_VertexBuffer.h; sourceTree = "<group>"; };
+		E14BDD2F15E53A6200EBDCCE /* W_VertexDeclaration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = W_VertexDeclaration.cpp; path = ../wolf/W_VertexDeclaration.cpp; sourceTree = "<group>"; };
+		E14BDD3015E53A6200EBDCCE /* W_VertexDeclaration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W_VertexDeclaration.h; path = ../wolf/W_VertexDeclaration.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E14BDC7C15C5F4A800EBDCCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14BDC9515C5F6BF00EBDCCE /* IOKit.framework in Frameworks */,
+				E14BDC9115C5F69500EBDCCE /* Cocoa.framework in Frameworks */,
+				E14BDC8F15C5F68000EBDCCE /* Quartz.framework in Frameworks */,
+				E14BDC8D15C5F66900EBDCCE /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E14BDC7415C5F4A800EBDCCE = {
+			isa = PBXGroup;
+			children = (
+				E14BDD2315E53A5300EBDCCE /* wolf */,
+				E14BDC9A15C626CE00EBDCCE /* Frameworks */,
+				E14BDC8215C5F4A800EBDCCE /* week2 */,
+				E14BDC8015C5F4A800EBDCCE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E14BDC8015C5F4A800EBDCCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E14BDC7F15C5F4A800EBDCCE /* week2 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E14BDC8215C5F4A800EBDCCE /* week2 */ = {
+			isa = PBXGroup;
+			children = (
+				E14BDD1D15E53A4100EBDCCE /* 2d.cpp */,
+				E14BDD1E15E53A4100EBDCCE /* 3d.cpp */,
+				E14BDD1F15E53A4100EBDCCE /* examples.h */,
+				E14BDC8315C5F4A800EBDCCE /* main.cpp */,
+			);
+			path = week2;
+			sourceTree = "<group>";
+		};
+		E14BDC9A15C626CE00EBDCCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E14BDC9415C5F6BF00EBDCCE /* IOKit.framework */,
+				E14BDC9215C5F6A300EBDCCE /* CoreFoundation.framework */,
+				E14BDC9015C5F69500EBDCCE /* Cocoa.framework */,
+				E14BDC8E15C5F68000EBDCCE /* Quartz.framework */,
+				E14BDC8C15C5F66900EBDCCE /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E14BDD2315E53A5300EBDCCE /* wolf */ = {
+			isa = PBXGroup;
+			children = (
+				E14BDD2415E53A6200EBDCCE /* W_Buffer.cpp */,
+				E14BDD2515E53A6200EBDCCE /* W_Buffer.h */,
+				E14BDD2615E53A6200EBDCCE /* W_Common.cpp */,
+				E14BDD2715E53A6200EBDCCE /* W_Common.h */,
+				E14BDD2815E53A6200EBDCCE /* W_IndexBuffer.cpp */,
+				E14BDD2915E53A6200EBDCCE /* W_IndexBuffer.h */,
+				E14BDD2A15E53A6200EBDCCE /* W_Program.cpp */,
+				E14BDD2B15E53A6200EBDCCE /* W_Program.h */,
+				E14BDD2C15E53A6200EBDCCE /* W_Types.h */,
+				E14BDD2D15E53A6200EBDCCE /* W_VertexBuffer.cpp */,
+				E14BDD2E15E53A6200EBDCCE /* W_VertexBuffer.h */,
+				E14BDD2F15E53A6200EBDCCE /* W_VertexDeclaration.cpp */,
+				E14BDD3015E53A6200EBDCCE /* W_VertexDeclaration.h */,
+			);
+			name = wolf;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E14BDC7E15C5F4A800EBDCCE /* week2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14BDC8915C5F4A800EBDCCE /* Build configuration list for PBXNativeTarget "week2" */;
+			buildPhases = (
+				E14BDC7B15C5F4A800EBDCCE /* Sources */,
+				E14BDC7C15C5F4A800EBDCCE /* Frameworks */,
+				E14BDC7D15C5F4A800EBDCCE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = week2;
+			productName = week2;
+			productReference = E14BDC7F15C5F4A800EBDCCE /* week2 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E14BDC7615C5F4A800EBDCCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E14BDC7915C5F4A800EBDCCE /* Build configuration list for PBXProject "week2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E14BDC7415C5F4A800EBDCCE;
+			productRefGroup = E14BDC8015C5F4A800EBDCCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E14BDC7E15C5F4A800EBDCCE /* week2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E14BDC7B15C5F4A800EBDCCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14BDC8415C5F4A800EBDCCE /* main.cpp in Sources */,
+				E14BDD2015E53A4100EBDCCE /* 2d.cpp in Sources */,
+				E14BDD2115E53A4100EBDCCE /* 3d.cpp in Sources */,
+				E14BDD3115E53A6200EBDCCE /* W_Buffer.cpp in Sources */,
+				E14BDD3215E53A6200EBDCCE /* W_Common.cpp in Sources */,
+				E14BDD3315E53A6200EBDCCE /* W_IndexBuffer.cpp in Sources */,
+				E14BDD3415E53A6200EBDCCE /* W_Program.cpp in Sources */,
+				E14BDD3515E53A6200EBDCCE /* W_VertexBuffer.cpp in Sources */,
+				E14BDD3615E53A6200EBDCCE /* W_VertexDeclaration.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E14BDC8715C5F4A800EBDCCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E14BDC8815C5F4A800EBDCCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E14BDC8A15C5F4A800EBDCCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
+				OTHER_LDFLAGS = (
+					"-lglfw",
+					"-L/usr/local/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E14BDC8B15C5F4A800EBDCCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
+				OTHER_LDFLAGS = (
+					"-lglfw",
+					"-L/usr/local/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E14BDC7915C5F4A800EBDCCE /* Build configuration list for PBXProject "week2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14BDC8715C5F4A800EBDCCE /* Debug */,
+				E14BDC8815C5F4A800EBDCCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E14BDC8915C5F4A800EBDCCE /* Build configuration list for PBXNativeTarget "week2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14BDC8A15C5F4A800EBDCCE /* Debug */,
+				E14BDC8B15C5F4A800EBDCCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E14BDC7615C5F4A800EBDCCE /* Project object */;
+}
