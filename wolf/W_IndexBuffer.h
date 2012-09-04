@@ -15,19 +15,25 @@ namespace wolf
 {
 class IndexBuffer : public Buffer
 {
+	friend class BufferManager;
 	public:
 		//-------------------------------------------------------------------------
 		// PUBLIC INTERFACE
 		//-------------------------------------------------------------------------
-		IndexBuffer(unsigned int p_uiNumIndices);
-		virtual ~IndexBuffer();
-		
 		virtual int GetNumIndices() const { return m_uiLength / 2; }
 		virtual void Bind();
 		virtual void Write(const void* p_pData, int p_iLength = -1);
 		//-------------------------------------------------------------------------
 
 	private:
+		//-------------------------------------------------------------------------
+		// PRIVATE METHODS
+		//-------------------------------------------------------------------------
+		// Made private to enforce creation and deletion via BufferManager
+		IndexBuffer(unsigned int p_uiNumIndices);
+		virtual ~IndexBuffer();
+		//-------------------------------------------------------------------------
+
 		//-------------------------------------------------------------------------
 		// PRIVATE MEMBERS
 		//-------------------------------------------------------------------------

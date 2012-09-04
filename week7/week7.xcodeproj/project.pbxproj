@@ -24,6 +24,8 @@
 		E14BDCF615D5E99900EBDCCE /* example4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCF515D5E99900EBDCCE /* example4.cpp */; };
 		E14BDCF815D5EAAD00EBDCCE /* example5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCF715D5EAAD00EBDCCE /* example5.cpp */; };
 		E14BDD3C15EA7B3800EBDCCE /* example6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD3B15EA7B3800EBDCCE /* example6.cpp */; };
+		E14BDD9015F5A94E00EBDCCE /* W_ProgramManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD8E15F5A94E00EBDCCE /* W_ProgramManager.cpp */; };
+		E14BDDBC15F5ACFD00EBDCCE /* W_BufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDDBA15F5ACFD00EBDCCE /* W_BufferManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -66,6 +68,10 @@
 		E14BDCF515D5E99900EBDCCE /* example4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example4.cpp; sourceTree = "<group>"; };
 		E14BDCF715D5EAAD00EBDCCE /* example5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example5.cpp; sourceTree = "<group>"; };
 		E14BDD3B15EA7B3800EBDCCE /* example6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example6.cpp; sourceTree = "<group>"; };
+		E14BDD8E15F5A94E00EBDCCE /* W_ProgramManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_ProgramManager.cpp; sourceTree = "<group>"; };
+		E14BDD8F15F5A94E00EBDCCE /* W_ProgramManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_ProgramManager.h; sourceTree = "<group>"; };
+		E14BDDBA15F5ACFD00EBDCCE /* W_BufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_BufferManager.cpp; sourceTree = "<group>"; };
+		E14BDDBB15F5ACFD00EBDCCE /* W_BufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_BufferManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,10 @@
 		E14BDCA315C6C95300EBDCCE /* wolf */ = {
 			isa = PBXGroup;
 			children = (
+				E14BDDBA15F5ACFD00EBDCCE /* W_BufferManager.cpp */,
+				E14BDDBB15F5ACFD00EBDCCE /* W_BufferManager.h */,
+				E14BDD8E15F5A94E00EBDCCE /* W_ProgramManager.cpp */,
+				E14BDD8F15F5A94E00EBDCCE /* W_ProgramManager.h */,
 				E14BDCA415C6C95300EBDCCE /* W_Common.cpp */,
 				E14BDCA515C6C95300EBDCCE /* W_Common.h */,
 				E14BDCA615C6C95300EBDCCE /* W_Types.h */,
@@ -212,6 +222,8 @@
 				E14BDCF615D5E99900EBDCCE /* example4.cpp in Sources */,
 				E14BDCF815D5EAAD00EBDCCE /* example5.cpp in Sources */,
 				E14BDD3C15EA7B3800EBDCCE /* example6.cpp in Sources */,
+				E14BDD9015F5A94E00EBDCCE /* W_ProgramManager.cpp in Sources */,
+				E14BDDBC15F5ACFD00EBDCCE /* W_BufferManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

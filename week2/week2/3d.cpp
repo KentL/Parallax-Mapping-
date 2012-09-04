@@ -12,9 +12,9 @@
 #endif
 #include <GL/glfw.h>
 #include "W_Common.h"
-#include "W_VertexBuffer.h"
+#include "W_BufferManager.h"
 #include "W_VertexDeclaration.h"
-#include "W_Program.h"
+#include "W_ProgramManager.h"
 
 struct Vertex
 {
@@ -81,9 +81,9 @@ void InitExample3D()
 {
     glEnable(GL_DEPTH_TEST);
     
-    g_pAxesProgram = new wolf::Program("data/week2/3d_axes.vsh", "data/week2/3d_axes.fsh");
-    g_pProgram = new wolf::Program("data/week2/3d.vsh", "data/week2/3d.fsh");
-    g_pVB = new wolf::VertexBuffer(cubeVertices, sizeof(Vertex) * 6 * 3 * 2);
+    g_pAxesProgram = wolf::ProgramManager::CreateProgram("data/week2/3d_axes.vsh", "data/week2/3d_axes.fsh");
+    g_pProgram = wolf::ProgramManager::CreateProgram("data/week2/3d.vsh", "data/week2/3d.fsh");
+    g_pVB = wolf::BufferManager::CreateVertexBuffer(cubeVertices, sizeof(Vertex) * 6 * 3 * 2);
 
 	g_pDecl = new wolf::VertexDeclaration();
 	g_pDecl->Begin();

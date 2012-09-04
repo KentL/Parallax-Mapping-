@@ -12,9 +12,9 @@
 #endif
 #include <GL/glfw.h>
 #include "W_Common.h"
-#include "W_VertexBuffer.h"
+#include "W_BufferManager.h"
 #include "W_VertexDeclaration.h"
-#include "W_Program.h"
+#include "W_ProgramManager.h"
 
 struct Vertex
 {
@@ -41,8 +41,8 @@ void InitExample2()
 {
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     
-    g_pProgram = new wolf::Program("data/week6/one_texture.vsh", "data/week6/one_texture.fsh");
-    g_pVB = new wolf::VertexBuffer(squareVertices, sizeof(Vertex) * 6);
+    g_pProgram = wolf::ProgramManager::CreateProgram("data/week6/one_texture.vsh", "data/week6/one_texture.fsh");
+    g_pVB = wolf::BufferManager::CreateVertexBuffer(squareVertices, sizeof(Vertex) * 6);
 
 	g_pDecl = new wolf::VertexDeclaration();
 	g_pDecl->Begin();

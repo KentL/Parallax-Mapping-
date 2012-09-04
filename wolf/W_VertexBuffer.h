@@ -15,19 +15,25 @@ namespace wolf
 {
 class VertexBuffer : public Buffer
 {
+	friend class BufferManager;
 	public:
 		//-------------------------------------------------------------------------
 		// PUBLIC INTERFACE
 		//-------------------------------------------------------------------------
-		VertexBuffer(unsigned int p_uiLength);
-		VertexBuffer(const void* p_pData, unsigned int p_uiLength);
-		virtual ~VertexBuffer();
-		
 		virtual void Bind();
 		virtual void Write(const void* p_pData, int p_iLength = -1);
 		//-------------------------------------------------------------------------
 
 	private:
+		//-------------------------------------------------------------------------
+		// PRIVATE METHODS
+		//-------------------------------------------------------------------------
+		// Made private to enforce creation and deletion via BufferManager
+		VertexBuffer(unsigned int p_uiLength);
+		VertexBuffer(const void* p_pData, unsigned int p_uiLength);
+		virtual ~VertexBuffer();
+		//-------------------------------------------------------------------------
+
 		//-------------------------------------------------------------------------
 		// PRIVATE MEMBERS
 		//-------------------------------------------------------------------------

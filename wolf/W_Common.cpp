@@ -368,7 +368,7 @@ int DDSImageSize(unsigned int w,
 	}
 }
 
-GLuint CreateTextureFromDDS(const std::string& p_strFile, unsigned int* p_pWidth, unsigned int* p_pHeight)
+GLuint CreateTextureFromDDS(const std::string& p_strFile, unsigned int* p_pWidth, unsigned int* p_pHeight, bool* p_pHasMips)
 {
 	DDS_TEXTURE dds;
 	memset(&dds, 0, sizeof(dds));
@@ -470,6 +470,8 @@ GLuint CreateTextureFromDDS(const std::string& p_strFile, unsigned int* p_pWidth
 		*p_pWidth = dds.width;
 	if( p_pHeight )
 		*p_pHeight = dds.height;
+	if( p_pHasMips )
+		*p_pHasMips = dds.mips > 1;
 
     return uiTex;
 }

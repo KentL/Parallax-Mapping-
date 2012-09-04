@@ -39,6 +39,42 @@ enum ComponentType
 	AT_NUM_COMPONENT_TYPES
 };
 
+enum DepthFunc
+{
+	DF_Never,
+	DF_Less,
+	DF_LessEqual,
+	DF_Equal,
+	DF_Greater,
+	DF_GreaterEqual,
+	DF_NotEqual,
+	DF_Always,
+	DF_NUM_DEPTH_FUNCS
+};
+
+enum BlendMode
+{
+	BM_SrcAlpha,			
+	BM_One,				
+	BM_SrcColor,	
+	BM_OneMinusSrcColor,
+	BM_OneMinusSrcAlpha,
+	BM_DstAlpha,	
+	BM_OneMinusDstAlpha,
+	BM_DstColor,	
+	BM_OneMinusDstColor,
+	BM_Zero,		
+	BM_NUM_BLEND_MODES
+};
+
+enum BlendEquation
+{
+	BE_Add,
+	BE_Subtract,
+	BE_ReverseSubtract,
+	BE_NUM_BLEND_EQUATIONS
+};
+
 struct Color4
 {
 	float r,g,b,a;

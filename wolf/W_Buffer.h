@@ -12,22 +12,22 @@ namespace wolf
 {
 class Buffer
 {
+	friend class BufferManager;
 	public:
 		//-------------------------------------------------------------------------
 		// PUBLIC INTERFACE
 		//-------------------------------------------------------------------------
-		Buffer() {}
-		virtual ~Buffer() {}
-		
 		virtual void Bind() = 0;
 		virtual void Write(const void* p_pData, int p_iLength = -1 ) = 0;
 		//-------------------------------------------------------------------------
 
-	private:
+	protected:
 		//-------------------------------------------------------------------------
-		// PRIVATE MEMBERS
+		// PROTECTED MEMBERS
 		//-------------------------------------------------------------------------
-		
+		// Made protected to enforce creation and deletion via BufferManager
+		Buffer() {}
+		virtual ~Buffer() {}
 		//-------------------------------------------------------------------------
 };
 

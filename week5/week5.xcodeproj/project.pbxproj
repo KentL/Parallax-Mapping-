@@ -22,6 +22,8 @@
 		E14BDCE015D0AF4D00EBDCCE /* W_VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCD915D0AF4D00EBDCCE /* W_VertexBuffer.cpp */; };
 		E14BDCE115D0AF4D00EBDCCE /* W_VertexDeclaration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCDB15D0AF4D00EBDCCE /* W_VertexDeclaration.cpp */; };
 		E14BDCE415D0B31B00EBDCCE /* example4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCE315D0B31B00EBDCCE /* example4.cpp */; };
+		E14BDD8015F5A8E300EBDCCE /* W_ProgramManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD7E15F5A8E300EBDCCE /* W_ProgramManager.cpp */; };
+		E14BDDAC15F5ACA300EBDCCE /* W_BufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDDAA15F5ACA300EBDCCE /* W_BufferManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +64,10 @@
 		E14BDCDB15D0AF4D00EBDCCE /* W_VertexDeclaration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_VertexDeclaration.cpp; sourceTree = "<group>"; };
 		E14BDCDC15D0AF4D00EBDCCE /* W_VertexDeclaration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_VertexDeclaration.h; sourceTree = "<group>"; };
 		E14BDCE315D0B31B00EBDCCE /* example4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example4.cpp; sourceTree = "<group>"; };
+		E14BDD7E15F5A8E300EBDCCE /* W_ProgramManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_ProgramManager.cpp; sourceTree = "<group>"; };
+		E14BDD7F15F5A8E300EBDCCE /* W_ProgramManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_ProgramManager.h; sourceTree = "<group>"; };
+		E14BDDAA15F5ACA300EBDCCE /* W_BufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_BufferManager.cpp; sourceTree = "<group>"; };
+		E14BDDAB15F5ACA300EBDCCE /* W_BufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_BufferManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,10 @@
 		E14BDCA315C6C95300EBDCCE /* wolf */ = {
 			isa = PBXGroup;
 			children = (
+				E14BDDAA15F5ACA300EBDCCE /* W_BufferManager.cpp */,
+				E14BDDAB15F5ACA300EBDCCE /* W_BufferManager.h */,
+				E14BDD7E15F5A8E300EBDCCE /* W_ProgramManager.cpp */,
+				E14BDD7F15F5A8E300EBDCCE /* W_ProgramManager.h */,
 				E14BDCA415C6C95300EBDCCE /* W_Common.cpp */,
 				E14BDCA515C6C95300EBDCCE /* W_Common.h */,
 				E14BDCA615C6C95300EBDCCE /* W_Types.h */,
@@ -204,6 +214,8 @@
 				E14BDCE015D0AF4D00EBDCCE /* W_VertexBuffer.cpp in Sources */,
 				E14BDCE115D0AF4D00EBDCCE /* W_VertexDeclaration.cpp in Sources */,
 				E14BDCE415D0B31B00EBDCCE /* example4.cpp in Sources */,
+				E14BDD8015F5A8E300EBDCCE /* W_ProgramManager.cpp in Sources */,
+				E14BDDAC15F5ACA300EBDCCE /* W_BufferManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -142,6 +142,20 @@ void Program::SetUniform(const char* p_strName, const glm::vec3& p_v)
 }
 
 //----------------------------------------------------------
+// Sets a vector uniform of the given name
+//----------------------------------------------------------
+void Program::SetUniform(const char* p_strName, const glm::vec4& p_v)
+{
+	int iLoc = glGetUniformLocation(m_uiProgram,p_strName);
+	if( iLoc == -1 )
+	{
+		//printf("WARNING: Unknown uniform %s\n", p_strName);
+		return;
+	}
+	glUniform4fv(iLoc, 1, glm::value_ptr(p_v));
+}
+
+//----------------------------------------------------------
 // Sets a color uniform of the given name
 //----------------------------------------------------------
 void Program::SetUniform(const char* p_strName, const wolf::Color4& p_c)
