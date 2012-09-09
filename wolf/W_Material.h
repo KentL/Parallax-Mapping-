@@ -6,7 +6,6 @@
 // + uniforms
 //
 // TODO:	
-//			Add textures
 //			Add colors
 //-----------------------------------------------------------------------------
 #ifndef W_MATERIAL_H

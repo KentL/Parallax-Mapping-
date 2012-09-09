@@ -28,7 +28,7 @@ class VertexDeclaration
 		void Begin();
 		void SetVertexBuffer(wolf::VertexBuffer* p_pVB);
 		void SetIndexBuffer(wolf::IndexBuffer* p_pIB);
-		void AppendAttribute(wolf::Attribute p_attr, int p_iNumComponents, wolf::ComponentType p_type);
+		void AppendAttribute(wolf::Attribute p_attr, int p_iNumComponents, wolf::ComponentType p_type, int p_iOffset = -1);
 		void End();
 
 		void Bind();
@@ -42,6 +42,7 @@ class VertexDeclaration
 		{
 			wolf::Attribute		m_attr;
 			wolf::ComponentType	m_type;
+			int					m_iOffset;
 			int					m_iNumComponents;
 		};
 		//-------------------------------------------------------------------------

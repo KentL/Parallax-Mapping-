@@ -15,6 +15,13 @@ static const char* gs_aAttributeMap[wolf::AT_NUM_ATTRIBS] =
 	"a_position",	//AT_Position = 0,
 	"a_color",		//AT_Color,
 	"a_uv1",		//AT_TexCoord1	
+	"a_uv2",		//AT_TexCoord2	
+	"a_uv3",		//AT_TexCoord3	
+	"a_uv4",		//AT_TexCoord4	
+	"a_uv5",		//AT_TexCoord5	
+	"a_uv6",		//AT_TexCoord6	
+	"a_uv7",		//AT_TexCoord7	
+	"a_uv8",		//AT_TexCoord8	
 	"a_normal",		//AT_Normal
 	"a_tangent",	//AT_Tangent
 };

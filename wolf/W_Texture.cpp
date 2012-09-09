@@ -122,11 +122,12 @@ void Texture::LoadFromTGA(const std::string& p_strFile)
 
 	GLFWimage img;
 	glfwReadImage( p_strFile.c_str(), &img, 0 );
-	glTexImage2D(GL_TEXTURE_2D, 0, img.Format, img.Width, img.Height, 0, img.Format, GL_UNSIGNED_BYTE, img.Data);
-	glfwFreeImage(&img);
-
-	m_uiWidth = img.Width;
+    glTexImage2D(GL_TEXTURE_2D, 0, img.Format, img.Width, img.Height, 0, img.Format, GL_UNSIGNED_BYTE, img.Data);
+    
+    m_uiWidth = img.Width;
 	m_uiHeight = img.Height;
+    
+	glfwFreeImage(&img);
 
 	glGenerateMipmap(GL_TEXTURE_2D);
 	SetFilterMode(FM_TrilinearMipmap, FM_Linear);
@@ -144,6 +145,7 @@ void Texture::SetWrapMode(WrapMode p_eWrapU, WrapMode p_eWrapV)
 	if( m_eWrapU == p_eWrapU && m_eWrapV == p_eWrapV )
 		return; // Nothing to do, move along!
 
+    Bind();
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, gs_aWrapMap[p_eWrapU]);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, gs_aWrapMap[p_eWrapV]);
 	m_eWrapU = p_eWrapU;
@@ -156,7 +158,7 @@ void Texture::SetWrapMode(WrapMode p_eWrapU, WrapMode p_eWrapV)
 //----------------------------------------------------------
 void Texture::SetFilterMode(FilterMode p_eFilterMin, FilterMode p_eFilterMag)
 {
-	if( p_eFilterMag == FM_Invalid )
+    if( p_eFilterMag == FM_Invalid )
 		p_eFilterMag = p_eFilterMin;
 
 	if( m_eFilterMin == p_eFilterMin && m_eFilterMag == p_eFilterMag )

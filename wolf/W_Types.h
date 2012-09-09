@@ -27,6 +27,13 @@ enum Attribute
 	AT_Position = 0,
 	AT_Color,
 	AT_TexCoord1,
+	AT_TexCoord2,
+	AT_TexCoord3,
+	AT_TexCoord4,
+	AT_TexCoord5,
+	AT_TexCoord6,
+	AT_TexCoord7,
+	AT_TexCoord8,
 	AT_Normal,
 	AT_Tangent,
 	AT_NUM_ATTRIBS
@@ -35,8 +42,19 @@ enum Attribute
 enum ComponentType
 {
 	CT_Float = 0,
+	CT_Int,	
+	CT_UInt,	
+	CT_Byte,	
 	CT_UByte,
-	AT_NUM_COMPONENT_TYPES
+	CT_UByte4,
+	CT_ByteNorm,
+	CT_UByteNorm,
+	CT_Short,	
+	CT_UShort,
+	CT_ShortNorm,
+	CT_UShortNorm,
+	AT_NUM_COMPONENT_TYPES,
+	CT_Invalid
 };
 
 enum DepthFunc
