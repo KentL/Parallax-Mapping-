@@ -244,6 +244,24 @@ void Material::SetUniform(const std::string& p_strName, const glm::vec3& p_v)
 }
 
 //----------------------------------------------------------
+// Set uniform version for vec4 uniforms
+//----------------------------------------------------------
+void Material::SetUniform(const std::string& p_strName, const wolf::Color4& p_c)
+{
+	std::map<std::string, Uniform*>::iterator iter = m_uniforms.find(p_strName);
+
+	if( iter == m_uniforms.end() )
+	{
+		m_uniforms.insert( std::pair<std::string, Uniform*>(p_strName, new Color4Uniform(p_strName,p_c)));
+		return;
+	}
+
+	assert(iter->second->m_eType == UT_Color4);
+	Color4Uniform* pUniform = static_cast<Color4Uniform*>(iter->second);
+	pUniform->m_value = p_c;
+}
+
+//----------------------------------------------------------
 // Set uniform version for float uniforms
 //----------------------------------------------------------
 void Material::SetUniform(const std::string& p_strName, float p_f)

@@ -4,9 +4,6 @@
 //
 // Class representing a material, which is a combination of state + shaders
 // + uniforms
-//
-// TODO:	
-//			Add colors
 //-----------------------------------------------------------------------------
 #ifndef W_MATERIAL_H
 #define W_MATERIAL_H
@@ -32,6 +29,7 @@ class Material
 		void SetUniform(const std::string& p_strName, const glm::mat3& p_m);
 		void SetUniform(const std::string& p_strName, const glm::vec4& p_m);
 		void SetUniform(const std::string& p_strName, const glm::vec3& p_m);
+		void SetUniform(const std::string& p_strName, const wolf::Color4& p_c);
 		void SetUniform(const std::string& p_strName, float p_f);
 
 		void SetTexture(const std::string& p_strName, const Texture* p_pTex);
@@ -58,6 +56,7 @@ class Material
 			UT_Matrix3,
 			UT_Vector3,
 			UT_Vector4,
+			UT_Color4,
 			UT_Float,
 			UT_Texture
 		};
@@ -93,6 +92,12 @@ class Material
 			Vector4Uniform(const std::string& p_strName, const glm::vec4& p_v) : Uniform(p_strName,UT_Vector4), m_value(p_v) {}
 			void UploadValue(Program* p_pProgram) { p_pProgram->SetUniform(m_strName.c_str(), m_value); }
 			glm::vec4		m_value;
+		};
+		struct Color4Uniform : public Uniform
+		{
+			Color4Uniform(const std::string& p_strName, const wolf::Color4& p_c) : Uniform(p_strName,UT_Color4), m_value(p_c) {}
+			void UploadValue(Program* p_pProgram) { p_pProgram->SetUniform(m_strName.c_str(), m_value); }
+			wolf::Color4		m_value;
 		};
 		struct FloatUniform : public Uniform
 		{

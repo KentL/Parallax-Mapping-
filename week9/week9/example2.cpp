@@ -19,6 +19,8 @@
 #include "PVRTModelPOD.h"
 #include "W_MaterialManager.h"
 
+#define GLM_AS_PVR(m)  *((PVRTMATRIX*)glm::value_ptr((m)))
+
 static CPVRTModelPOD g_pod;
 static std::vector<wolf::VertexBuffer*> g_lVBs;
 static std::vector<wolf::IndexBuffer*> g_lIBs;
@@ -139,7 +141,7 @@ void RenderExample2()
 
 		// Calculate its world matrix from the POD file, plus add a little
 		// rotation so we can see it all easily
-        g_pod.GetWorldMatrix(*((PVRTMATRIX*)glm::value_ptr(mWorld)), *pNode);
+        g_pod.GetWorldMatrix(GLM_AS_PVR(mWorld), *pNode);
         
         mWorld = glm::rotate(s_fRot, 0.0f, 1.0f, 0.0f)*mWorld;
 		pMat->SetUniform("world", mWorld);  

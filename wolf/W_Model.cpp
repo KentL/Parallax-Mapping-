@@ -42,7 +42,7 @@ Model::Model(const std::string& p_strFile, const std::string& p_strTexturePrefix
 	m_pod.ReadFromFile(p_strFile.c_str());
 
 	// Build all the meshes
-	for(int i = 0; i < m_pod.nNumMesh; i++)
+	for(int i = 0; i < 1/*m_pod.nNumMesh*/; i++)
 	{
 		SPODMesh* pMesh = &m_pod.pMesh[i];
 
@@ -99,26 +99,25 @@ Model::Model(const std::string& p_strFile, const std::string& p_strTexturePrefix
 
 		// Grab the texture it's using and change the filename it expects to
 		// be our TGA converted files, in the right path
-		SPODTexture* pPODTex = &m_pod.pTexture[pPODMat->nIdxTexDiffuse];
-            
-		std::string strFilename = pPODTex->pszName;
-		if( strFilename.find(".jpg") != std::string::npos )
-			strFilename = strFilename.substr(0,strFilename.find(".jpg")) + std::string(".tga");
-		else if( strFilename.find(".png") != std::string::npos )
-			strFilename = strFilename.substr(0,strFilename.find(".png")) + std::string(".tga");
+        if( pPODMat->nIdxTexDiffuse != -1 )
+        {
+            SPODTexture* pPODTex = &m_pod.pTexture[pPODMat->nIdxTexDiffuse];
+                
+            std::string strFilename = pPODTex->pszName;
+            if( strFilename.find(".jpg") != std::string::npos )
+                strFilename = strFilename.substr(0,strFilename.find(".jpg")) + std::string(".tga");
+            else if( strFilename.find(".png") != std::string::npos )
+                strFilename = strFilename.substr(0,strFilename.find(".png")) + std::string(".tga");
 
-		strFilename = p_strTexturePrefix + strFilename;
+            strFilename = p_strTexturePrefix + strFilename;
 
-		// Create the texture, make sure it's set to repeat, and assign it
-		// to the material
-		//
-		// CLASS NOTE: I'm assuming that the texture should be set to repeat
-		// here. This is a bad assumption. Change this code to look in the POD
-		// file for this data and choose repeat or clamp accordingly!
-		wolf::Texture* pTex = wolf::TextureManager::CreateTexture(strFilename.c_str());
-		pTex->SetWrapMode(wolf::Texture::WM_Repeat);
-		pMat->SetTexture("texture",pTex);
-
+            // Create the texture, make sure it's set to repeat, and assign it
+            // to the material
+            wolf::Texture* pTex = wolf::TextureManager::CreateTexture(strFilename.c_str());
+            pTex->SetWrapMode(wolf::Texture::WM_Repeat);
+            pMat->SetTexture("texture",pTex);
+        }
+        
 		// CLASS NOTE: I'm not reading blend modes from the materials in the POD
 		// file. This is bad and will lead to incorrect rendering. Add some code
 		// to look in the POD file for this data and set it up in the
@@ -146,7 +145,7 @@ Model::~Model()
 void Model::Render(const glm::mat4& p_mWorld, const glm::mat4& p_mView, const glm::mat4& p_mProj)
 {
 	// Go through every mesh node in the pod file
-	for(int i = 0; i < m_pod.nNumMeshNode; i++)
+	for(int i = 0; i < 1/*m_pod.nNumMeshNode*/; i++)
 	{
         SPODNode* pNode = &m_pod.pNode[i];
         

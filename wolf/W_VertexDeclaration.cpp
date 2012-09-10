@@ -146,8 +146,8 @@ void VertexDeclaration::Bind()
 {
     glBindVertexArray(m_vao);
     m_pVB->Bind();
-    m_pIB->Bind();
-	
+    if( m_pIB )
+        m_pIB->Bind();
 }
 
 //----------------------------------------------------------

@@ -7,6 +7,7 @@
 // ASSUMPTIONS:
 //	1) POD files will always be exported as Index Triangle Lists
 //	2) No more than 8 UV channels in the POD file
+//	3) Model is exported with interleaved data
 //-----------------------------------------------------------------------------
 #ifndef W_MODEL_H
 #define W_MODEL_H
