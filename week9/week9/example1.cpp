@@ -43,13 +43,16 @@ void InitExample1()
     g_pDecl->AppendAttribute(wolf::AT_Position, pMesh->sVertex.n, wolf::CT_Float);
     g_pDecl->AppendAttribute(wolf::AT_Normal, pMesh->sNormals.n, wolf::CT_Float);
     g_pDecl->AppendAttribute(wolf::AT_TexCoord1, pMesh->psUVW[0].n, wolf::CT_Float);
+
     g_pDecl->SetVertexBuffer(g_pVB);
     g_pDecl->SetIndexBuffer(g_pIB);
     g_pDecl->End();
     
     g_pMat = wolf::MaterialManager::CreateMaterial("myMat");
     g_pMat->SetProgram("data/week9/textured.vsh", "data/week9/textured.fsh");
-    g_pMat->SetTexture("texture", wolf::TextureManager::CreateTexture("data/week9/brick.dds"));
+    wolf::Texture* pTex = wolf::TextureManager::CreateTexture("data/week10/MaskMain.tga");
+    pTex->SetWrapMode(wolf::Texture::WM_Repeat);
+    g_pMat->SetTexture("texture", pTex);
 }
 
 void RenderExample1()

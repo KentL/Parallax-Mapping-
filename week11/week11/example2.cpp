@@ -68,7 +68,8 @@ void InitExample2()
     
     g_pMat = wolf::MaterialManager::CreateMaterial("myMat");
     g_pMat->SetProgram("data/week11/point_light.vsh", "data/week11/point_light.fsh");
-    g_pMat->SetTexture("texture", wolf::TextureManager::CreateTexture("data/week11/MaskMain.tga"));
+	wolf::Texture* pTex = wolf::TextureManager::CreateTexture("data/week11/MaskMain.tga");
+	pTex->SetWrapMode(wolf::Texture::WM_Repeat);
 
 	// Initialize the surface material
 	g_maskSurface.m_diffuse = wolf::Color4(1,1,1,1);

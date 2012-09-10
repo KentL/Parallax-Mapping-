@@ -13,7 +13,7 @@
 #include "examples.h"
 #include <glm/glm.hpp>
 
-int g_iExample = 3;
+int g_iExample = 1;
 
 int main( void )
 {

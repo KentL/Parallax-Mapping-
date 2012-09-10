@@ -49,7 +49,9 @@ void InitExample3()
     
     g_pMat = wolf::MaterialManager::CreateMaterial("myMat");
     g_pMat->SetProgram("data/week10/example3.vsh", "data/week10/example3.fsh");
-    g_pMat->SetTexture("texture", wolf::TextureManager::CreateTexture("data/week10/MaskMain.tga"));
+	wolf::Texture* pTex = wolf::TextureManager::CreateTexture("data/week10/MaskMain.tga");
+	pTex->SetWrapMode(wolf::Texture::WM_Repeat);
+    g_pMat->SetTexture("texture", pTex);
 }
 
 void RenderExample3()
