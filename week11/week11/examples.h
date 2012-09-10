@@ -22,4 +22,7 @@ void RenderExample4();
 void InitExample5();
 void RenderExample5();
 
+void InitExample6();
+void RenderExample6();
+
 #endif

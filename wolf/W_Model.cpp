@@ -42,7 +42,7 @@ Model::Model(const std::string& p_strFile, const std::string& p_strTexturePrefix
 	m_pod.ReadFromFile(p_strFile.c_str());
 
 	// Build all the meshes
-	for(int i = 0; i < 1/*m_pod.nNumMesh*/; i++)
+	for(int i = 0; i < m_pod.nNumMesh; i++)
 	{
 		SPODMesh* pMesh = &m_pod.pMesh[i];
 
@@ -145,7 +145,7 @@ Model::~Model()
 void Model::Render(const glm::mat4& p_mWorld, const glm::mat4& p_mView, const glm::mat4& p_mProj)
 {
 	// Go through every mesh node in the pod file
-	for(int i = 0; i < 1/*m_pod.nNumMeshNode*/; i++)
+	for(int i = 0; i < m_pod.nNumMeshNode; i++)
 	{
         SPODNode* pNode = &m_pod.pNode[i];
         

@@ -13,7 +13,7 @@
 #include "examples.h"
 #include <glm/glm.hpp>
 
-int g_iExample = 5;
+int g_iExample = 6;
 
 int main( void )
 {
@@ -60,6 +60,7 @@ int main( void )
 		case 3: InitExample3(); break;
 		case 4: InitExample4(); break;
 		case 5: InitExample5(); break;
+		case 6: InitExample6(); break;
 	}
 
     do
@@ -86,6 +87,7 @@ int main( void )
 			case 3: RenderExample3(); break;
 			case 4: RenderExample4(); break;
 			case 5: RenderExample5(); break;
+			case 6: RenderExample6(); break;
 		}
 
         // Swap buffers

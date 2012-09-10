@@ -11,6 +11,7 @@
 		E143211D15FD6B5800813DB6 /* example3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E143211C15FD6B5800813DB6 /* example3.cpp */; };
 		E143211F15FD831300813DB6 /* example4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E143211E15FD831300813DB6 /* example4.cpp */; };
 		E143212115FD89A600813DB6 /* example5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E143212015FD89A600813DB6 /* example5.cpp */; };
+		E143212315FD8CB100813DB6 /* example6.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E143212215FD8CB100813DB6 /* example6.cpp */; };
 		E14BDC8415C5F4A800EBDCCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDC8315C5F4A800EBDCCE /* main.cpp */; };
 		E14BDC8D15C5F66900EBDCCE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC8C15C5F66900EBDCCE /* OpenGL.framework */; };
 		E14BDC8F15C5F68000EBDCCE /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E14BDC8E15C5F68000EBDCCE /* Quartz.framework */; };
@@ -67,6 +68,7 @@
 		E143211C15FD6B5800813DB6 /* example3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example3.cpp; sourceTree = "<group>"; };
 		E143211E15FD831300813DB6 /* example4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example4.cpp; sourceTree = "<group>"; };
 		E143212015FD89A600813DB6 /* example5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example5.cpp; sourceTree = "<group>"; };
+		E143212215FD8CB100813DB6 /* example6.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example6.cpp; sourceTree = "<group>"; };
 		E14BDC7F15C5F4A800EBDCCE /* week11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = week11; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14BDC8315C5F4A800EBDCCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E14BDC8C15C5F66900EBDCCE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -190,6 +192,7 @@
 				E143211C15FD6B5800813DB6 /* example3.cpp */,
 				E143211E15FD831300813DB6 /* example4.cpp */,
 				E143212015FD89A600813DB6 /* example5.cpp */,
+				E143212215FD8CB100813DB6 /* example6.cpp */,
 				E14BDCAA15C8389700EBDCCE /* examples.h */,
 				E14BDC8315C5F4A800EBDCCE /* main.cpp */,
 			);
@@ -381,6 +384,7 @@
 				E143211D15FD6B5800813DB6 /* example3.cpp in Sources */,
 				E143211F15FD831300813DB6 /* example4.cpp in Sources */,
 				E143212115FD89A600813DB6 /* example5.cpp in Sources */,
+				E143212315FD8CB100813DB6 /* example6.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
