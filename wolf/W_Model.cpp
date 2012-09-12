@@ -46,17 +46,17 @@ Model::Model(const std::string& p_strFile, const std::string& p_strTexturePrefix
 	{
 		SPODMesh* pMesh = &m_pod.pMesh[i];
 
-		// Create the vertex buffer
-		wolf::VertexBuffer* pVB = wolf::BufferManager::CreateVertexBuffer(pMesh->pInterleaved, pMesh->nNumVertex * pMesh->sVertex.nStride);
-
-		// Create the index buffer
-		wolf::IndexBuffer* pIB = wolf::BufferManager::CreateIndexBuffer(pMesh->nNumFaces*3);
-		pIB->Write(pMesh->sFaces.pData);
-
 		// Create the vertex declaration
 		wolf::VertexDeclaration* pDecl = new wolf::VertexDeclaration;
 		pDecl->Begin();
 
+        // Create the vertex buffer
+		wolf::VertexBuffer* pVB = wolf::BufferManager::CreateVertexBuffer(pMesh->pInterleaved, pMesh->nNumVertex * pMesh->sVertex.nStride);
+        
+		// Create the index buffer
+		wolf::IndexBuffer* pIB = wolf::BufferManager::CreateIndexBuffer(pMesh->nNumFaces*3);
+		pIB->Write(pMesh->sFaces.pData);
+        
 		// We'll always have a position
 		pDecl->AppendAttribute(wolf::AT_Position, pMesh->sVertex.n, gs_aPODTypeMap[pMesh->sVertex.eType], *((int*)&pMesh->sVertex.pData));
 
