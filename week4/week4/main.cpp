@@ -41,8 +41,12 @@ int main( void )
     }
     
 #ifndef __APPLE__
+	glewExperimental = GL_TRUE;
 	glewInit();
 #endif
+	// Leave this here! On windows machines in Lab, glewInit is generating some mysterious, but apparently
+	// harmless, error - and we need it gone.
+	glGetError();
 
     glfwSetWindowTitle( "Week 4" );
     

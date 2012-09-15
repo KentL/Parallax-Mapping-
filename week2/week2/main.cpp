@@ -49,7 +49,7 @@ int main( void )
 	// harmless, error - and we need it gone.
 	glGetError();
 
-    glfwSetWindowTitle( "Week 4" );
+    glfwSetWindowTitle( "Week 2" );
     
     // Ensure we can capture the escape key being pressed below
     glfwEnable( GLFW_STICKY_KEYS );
