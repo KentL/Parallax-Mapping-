@@ -12,8 +12,8 @@
 #include "W_Common.h"
 #include "examples.h"
 
-//#define EXAMPLE_2D
-#define EXAMPLE_3D
+#define EXAMPLE_2D
+//#define EXAMPLE_3D
 
 int main( void )
 {
@@ -40,10 +40,14 @@ int main( void )
         glfwTerminate();
         exit( EXIT_FAILURE );
     }
-    
+
 #ifndef __APPLE__
+	glewExperimental = GL_TRUE;
 	glewInit();
 #endif
+	// Leave this here! On windows machines in Lab, glewInit is generating some mysterious, but apparently
+	// harmless, error - and we need it gone.
+	glGetError();
 
     glfwSetWindowTitle( "Week 4" );
     
