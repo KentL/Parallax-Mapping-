@@ -12,8 +12,8 @@
 #include "W_Common.h"
 #include "examples.h"
 
-#define EXAMPLE_2D
-//#define EXAMPLE_3D
+//#define EXAMPLE_2D
+#define EXAMPLE_3D
 
 int main( void )
 {
@@ -57,6 +57,11 @@ int main( void )
     // Enable vertical sync (on cards that support it)
     glfwSwapInterval( 1 );
     
+    glm::vec3 v1(12.0f,4.0f,8.0f);
+    glm::vec3 v2(-7.0f,8.0f,2.0f);
+    
+    glm::vec3 v3 = glm::cross(v1,v2);
+    printf("V3 = %f,%f,%f\n", v3.x,v3.y,v3.z);
 #if defined(EXAMPLE_2D)
 	InitExample2D();
 #elif defined(EXAMPLE_3D)

@@ -122,8 +122,9 @@ static void TEST_MATRIX(float p_00, float p_01, float p_02, float p_03,
 
 void RenderExample3D()
 {
+	static glm::vec3 s_vCamPos(-3.0f,28.0f,14.0f);
 	glm::mat4 mProj = glm::perspective(45.0f, 1280.0f / 720.0f, 0.1f, 1000.0f);
-	glm::mat4 mView = glm::lookAt(glm::vec3(-3.0f,28.0f,14.0f), glm::vec3(0.0f,0.0f,0.0f), glm::vec3(0.0f,1.0f,0.0f));
+	glm::mat4 mView = glm::lookAt(s_vCamPos, glm::vec3(0.0f,0.0f,0.0f), glm::vec3(0.0f,1.0f,0.0f));
 
 
     
@@ -139,6 +140,21 @@ void RenderExample3D()
 
 
 
+
+    if( glfwGetKey( GLFW_KEY_DOWN ) == GLFW_PRESS )
+		s_vCamPos.y += 1.0f;
+	else if( glfwGetKey( GLFW_KEY_UP ) == GLFW_PRESS )
+		s_vCamPos.y -= 1.0f;
+    if( glfwGetKey( GLFW_KEY_LEFT ) == GLFW_PRESS )
+		s_vCamPos.x -= 1.0f;
+    if( glfwGetKey( GLFW_KEY_RIGHT ) == GLFW_PRESS )
+		s_vCamPos.x += 1.0f;
+    if( glfwGetKey( GLFW_KEY_LSHIFT ) == GLFW_PRESS && glfwGetKey( GLFW_KEY_DOWN ) == GLFW_PRESS )
+		s_vCamPos.z += 1.0f;
+    if( glfwGetKey( GLFW_KEY_RSHIFT ) == GLFW_PRESS && glfwGetKey( GLFW_KEY_UP ) == GLFW_PRESS )
+		s_vCamPos.z -= 1.0f;
+    if( glfwGetKey( 'R' ) == GLFW_PRESS )
+		s_vCamPos = glm::vec3(-3.0f,28.0f,14.0f);
 
     // Use shader program.
 	g_pProgram->Bind();
