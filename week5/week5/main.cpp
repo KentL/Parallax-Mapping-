@@ -12,6 +12,7 @@
 #include "W_Common.h"
 #include "examples.h"
 
+
 int g_iExample = 4;
 
 int main( void )
@@ -26,10 +27,10 @@ int main( void )
         exit( EXIT_FAILURE );
     }
     
-    glfwOpenWindowHint(GLFW_OPENGL_VERSION_MAJOR, 3);
-    glfwOpenWindowHint(GLFW_OPENGL_VERSION_MINOR, 2);
-    glfwOpenWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    glfwOpenWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwOpenWindowHint(GLFW_OPENGL_VERSION_MAJOR, 2);
+    glfwOpenWindowHint(GLFW_OPENGL_VERSION_MINOR, 0);
+    //glfwOpenWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    //glfwOpenWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     
     // Open a window and create its OpenGL context
     if( !glfwOpenWindow( 1280, 720, 0,0,0,0, 24,0, GLFW_WINDOW ) )
@@ -62,6 +63,7 @@ int main( void )
 		case 2: InitExample2(); break;
 		case 3: InitExample3(); break;
 		case 4: InitExample4(); break;
+		case 5: InitExample5(); break;
 	}
 
     do
@@ -87,6 +89,7 @@ int main( void )
 			case 2: RenderExample2(); break;
 			case 3: RenderExample3(); break;
 			case 4: RenderExample4(); break;
+			case 5: RenderExample5(); break;
 		}
 
         // Swap buffers

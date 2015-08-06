@@ -20,17 +20,33 @@ static const GLfloat squareVertices[] = {
 
 	300.0f, 300.0f,
 	300.0f, 100.0f,
-	100.0f, 100.0f
+	100.0f, 100.0f,
+
+	100.0f+50, 100.0f,
+	100.0f + 50, 300.0f,
+	300.0f + 50, 300.0f,
+
+	300.0f + 50, 300.0f + 50,
+	300.0f + 50, 100.0f + 50,
+	100.0f + 50, 100.0f + 50
 };
 
 static const GLubyte squareColors[] = {
-	255,   255, 0, 255, //yellow
-	0,     255, 0, 255, //green
-	255,     0, 0, 255, //red
+	255,   0, 0, 122, //yellow
+	255, 0, 0, 122, //green
+	255, 0, 0, 122, //red
 	
-	0,     0, 255, 255, //blue
-	255,   0, 255, 255, //magenta
-	0,   255, 255, 255, //cyan
+	255, 0, 0, 122, //blue
+	255, 0, 0, 122, //magenta
+	255, 0, 0, 122, //cyan
+	
+	255, 255, 0, 122, //yellow
+	255, 255, 0, 122, //green
+	255, 255, 0, 122, //red
+
+	255, 255, 0, 122, //blue
+	255, 255, 0, 122, //magenta
+	255, 255, 0, 122, //cyan
 };
 
 static GLuint program = 0;
@@ -50,16 +66,21 @@ void InitExample3()
     glBindBuffer(GL_ARRAY_BUFFER, vboVerts);
     
     glBufferData(GL_ARRAY_BUFFER, // Vertex Data
-                 8 * 6,  // The total size of the buffer, in bytes
+                 2*8 * 6,  // The total size of the buffer, in bytes
                  squareVertices, // Pointer to the data to copy over to VRAM
                  GL_STATIC_DRAW); // Hint to the driver for how it’ll be used.
+
+	//glEnable(GL_DEPTH_TEST);
+	//glEnable(GL_BLEND);
+
+	//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	// Create VBO for colors
     glGenBuffers(1, &vboColors);
     glBindBuffer(GL_ARRAY_BUFFER, vboColors);
     
     glBufferData(GL_ARRAY_BUFFER, // Vertex Data
-                 4 * 6,  // The total size of the buffer, in bytes
+		2 * 4 * 6,  // The total size of the buffer, in bytes
                  squareColors, // Pointer to the data to copy over to VRAM
                  GL_STATIC_DRAW); // Hint to the driver for how it’ll be used.
     
@@ -99,5 +120,5 @@ void RenderExample3()
     glBindVertexArray(vao);
     
     // Draw!
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+	glDrawArrays(GL_TRIANGLES, 0, 2 * 6);
 }

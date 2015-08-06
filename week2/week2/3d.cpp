@@ -24,12 +24,12 @@ struct Vertex
 
 static const Vertex cubeVertices[] = {
 	// Front
-	{ -0.5f, -0.5f, 0.5f, 255, 0, 0, 255 },
-	{ -0.5f,  0.5f, 0.5f, 255, 0, 0, 255 },
-	{  0.5f,  0.5f, 0.5f, 255, 0, 0, 255 },
-	{  0.5f,  0.5f, 0.5f, 255, 0, 0, 255 },
-	{  0.5f, -0.5f, 0.5f, 255, 0, 0, 255 },
-	{ -0.5f, -0.5f, 0.5f, 255, 0, 0, 255 },
+	{ -0.5f, -0.5f, 0.5f, 0, 0, 0, 255 },
+	{ -0.5f,  0.5f, 0.5f, 0, 0, 0, 255 },
+	{  0.5f,  0.5f, 0.5f, 0, 0, 0, 255 },
+	{  0.5f,  0.5f, 0.5f, 0, 0, 0, 255 },
+	{  0.5f, -0.5f, 0.5f, 0, 0, 0, 255 },
+	{ -0.5f, -0.5f, 0.5f, 0, 0, 0, 255 },
 
 	// Back
 	{  0.5f,  0.5f,-0.5f, 128, 0, 0, 255 },
@@ -122,7 +122,7 @@ static void TEST_MATRIX(float p_00, float p_01, float p_02, float p_03,
 
 void RenderExample3D()
 {
-	static glm::vec3 s_vCamPos(-3.0f,28.0f,14.0f);
+	static glm::vec3 s_vCamPos(1.0f,-1.0f,8.0f);
 	glm::mat4 mProj = glm::perspective(45.0f, 1280.0f / 720.0f, 0.1f, 1000.0f);
 	glm::mat4 mView = glm::lookAt(s_vCamPos, glm::vec3(0.0f,0.0f,0.0f), glm::vec3(0.0f,1.0f,0.0f));
 
@@ -185,17 +185,17 @@ void RenderExample3D()
 		// x-axis
 		mWorld = glm::scale(1000.0f, 0.03f, 0.03f);
 		g_pAxesProgram->SetUniform("world", mWorld);    
-		glDrawArrays(GL_TRIANGLES, 0, 6 * 3 * 2);
+		glDrawArrays(GL_LINES, 0, 6 * 3 * 2);
 
 		// y-axis
 		mWorld = glm::scale(0.03f, 100.0f, 0.03f);
 		g_pAxesProgram->SetUniform("world", mWorld);    
-		glDrawArrays(GL_TRIANGLES, 0, 6 * 3 * 2);
+		glDrawArrays(GL_LINES, 0, 6 * 3 * 2);
 
 		// z-axis
 		mWorld = glm::scale(0.03f, 0.03f, 1000.0f);
 		g_pAxesProgram->SetUniform("world", mWorld);    
-		glDrawArrays(GL_TRIANGLES, 0, 6 * 3 * 2);
+		glDrawArrays(GL_LINES, 0, 6 * 3 * 2);
 	}
 }
 

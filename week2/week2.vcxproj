@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -12,7 +12,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{85D2A377-99E1-4513-BBAD-362AB7A16A98}</ProjectGuid>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>week2</RootNamespace>
   </PropertyGroup>
@@ -22,12 +22,14 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <CLRSupport>false</CLRSupport>
     <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CLRSupport>true</CLRSupport>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -51,13 +53,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <AdditionalIncludeDirectories>C:\Projects\UPEI\graphics-1-code;C:\Projects\UPEI\graphics-1-code\wolf;C:\Projects\UPEI\graphics-1-code\glfw\include;C:\Projects\UPEI\graphics-1-code\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\My document\My documents\UPEI\courses\graphics\graphics-1-code\graphics-1-code\glfw\include;D:\My document\My documents\UPEI\courses\graphics\graphics-1-code\graphics-1-code\glew\include;D:\My document\My documents\UPEI\courses\graphics\graphics-1-code\graphics-1-code\wolf;D:\My document\My documents\UPEI\courses\graphics\graphics-1-code\graphics-1-code;C:\Users\Cheuckkwan\Downloads\graphics-1-code\graphics-1-code\wolf;C:\Users\Cheuckkwan\Downloads\graphics-1-code\graphics-1-code\glm;C:\Users\Cheuckkwan\Downloads\graphics-1-code\graphics-1-code\glew;C:\Projects\UPEI\graphics-1-code;C:\Users\Cheuckkwan\Downloads\graphics-1-code\graphics-1-code\glew\include;C:\Projects\UPEI\graphics-1-code\wolf;C:\Projects\UPEI\graphics-1-code\glfw\include;C:\Projects\UPEI\graphics-1-code\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>GLFW.lib;glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Projects\UPEI\graphics-1-code\glew\lib;C:\Projects\UPEI\graphics-1-code\glfw\lib-msvc100;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\glew\lib;$(SolutionDir)..\glfw\lib-msvc100;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -90,9 +92,15 @@
     <ClCompile Include="..\wolf\W_TextureManager.cpp" />
     <ClCompile Include="..\wolf\W_VertexBuffer.cpp" />
     <ClCompile Include="..\wolf\W_VertexDeclaration.cpp" />
-    <ClCompile Include="week2\2d.cpp" />
-    <ClCompile Include="week2\3d.cpp" />
-    <ClCompile Include="week2\main.cpp" />
+    <ClCompile Include="week2\2d.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\My document\My documents\UPEI\courses\graphics\graphics-1-code\graphics-1-code\glew\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="week2\3d.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Cheuckkwan\Downloads\graphics-1-code\graphics-1-code\glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="week2\main.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Cheuckkwan\Downloads\graphics-1-code\graphics-1-code\glew;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\wolf\W_Buffer.h" />
@@ -108,6 +116,12 @@
     <ClInclude Include="..\wolf\W_Types.h" />
     <ClInclude Include="..\wolf\W_VertexBuffer.h" />
     <ClInclude Include="..\wolf\W_VertexDeclaration.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\data\week2\2d.fsh" />
+    <None Include="..\data\week2\2d.vsh" />
+    <None Include="..\data\week2\3d.fsh" />
+    <None Include="..\data\week2\3d.vsh" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

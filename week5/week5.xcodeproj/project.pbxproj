@@ -24,6 +24,7 @@
 		E14BDCE415D0B31B00EBDCCE /* example4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDCE315D0B31B00EBDCCE /* example4.cpp */; };
 		E14BDD8015F5A8E300EBDCCE /* W_ProgramManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDD7E15F5A8E300EBDCCE /* W_ProgramManager.cpp */; };
 		E14BDDAC15F5ACA300EBDCCE /* W_BufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E14BDDAA15F5ACA300EBDCCE /* W_BufferManager.cpp */; };
+		E1E68C24161D10E2007E91AF /* example5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1E68C23161D10E2007E91AF /* example5.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +69,7 @@
 		E14BDD7F15F5A8E300EBDCCE /* W_ProgramManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_ProgramManager.h; sourceTree = "<group>"; };
 		E14BDDAA15F5ACA300EBDCCE /* W_BufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = W_BufferManager.cpp; sourceTree = "<group>"; };
 		E14BDDAB15F5ACA300EBDCCE /* W_BufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W_BufferManager.h; sourceTree = "<group>"; };
+		E1E68C23161D10E2007E91AF /* example5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = example5.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				E14BDCCE15CEE1A300EBDCCE /* example2.cpp */,
 				E14BDCD115CEF05200EBDCCE /* example3.cpp */,
 				E14BDCE315D0B31B00EBDCCE /* example4.cpp */,
+				E1E68C23161D10E2007E91AF /* example5.cpp */,
 				E14BDCAA15C8389700EBDCCE /* examples.h */,
 				E14BDC8315C5F4A800EBDCCE /* main.cpp */,
 			);
@@ -216,6 +219,7 @@
 				E14BDCE415D0B31B00EBDCCE /* example4.cpp in Sources */,
 				E14BDD8015F5A8E300EBDCCE /* W_ProgramManager.cpp in Sources */,
 				E14BDDAC15F5ACA300EBDCCE /* W_BufferManager.cpp in Sources */,
+				E1E68C24161D10E2007E91AF /* example5.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +274,10 @@
 		E14BDC8A15C5F4A800EBDCCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/..\"",
+					/usr/local/Cellar/glfw2/2.7.9/include,
+				);
 				OTHER_LDFLAGS = (
 					"-lglfw",
 					"-L/usr/local/lib",
@@ -282,7 +289,10 @@
 		E14BDC8B15C5F4A800EBDCCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/..\"",
+					/usr/local/Cellar/glfw2/2.7.9/include,
+				);
 				OTHER_LDFLAGS = (
 					"-lglfw",
 					"-L/usr/local/lib",

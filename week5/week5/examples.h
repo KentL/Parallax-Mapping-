@@ -19,6 +19,9 @@ void RenderExample3();
 void InitExample4();
 void RenderExample4();
 
+void InitExample5();
+void RenderExample5();
+
 #endif
 
 

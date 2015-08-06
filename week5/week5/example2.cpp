@@ -19,11 +19,17 @@ struct Vertex
 	GLubyte r,g,b,a;
 };
 
-static const Vertex squareVertices[] = {
+static const Vertex aaa[] = {
 	{ -1.0f,  -1.0f,	255, 255, 0, 255 },
 	{ 1.0f,  -1.0f,		0, 255, 0, 255 },
 	{ -1.0f,   1.0f,	255, 0, 0, 255 },
 	{ 1.0f,   1.0f,		0, 255, 255, 255 },
+};
+static const Vertex bbb[] = {
+		{ -1.0f, -1.0f, 255, 0, 0, 255 },
+		{ 1.0f, -1.0f, 0, 255, 0, 255 },
+		{ -1.0f, 1.0f, 0, 255, 0, 255 },
+		{ 1.0f, 1.0f, 0, 0, 255, 255 },
 };
 
 static const unsigned short squareIndices[] = {
@@ -36,9 +42,21 @@ static const unsigned short squareIndices[] = {
 	3,
 };
 
+static const unsigned short squareIndices2[] = {
+	0,
+	1,
+	2,
+
+	
+};
+
+
+
 static GLuint program = 0;
 static GLuint vbo = 0;
+static GLuint vbo2 = 0;
 static GLuint indexBuffer = 0;
+static GLuint indexBuffer2 = 0;
 static GLuint vao = 0;
 
 void InitExample2()
@@ -53,8 +71,16 @@ void InitExample2()
     
     glBufferData(GL_ARRAY_BUFFER, // Vertex Data
                  sizeof(Vertex) * 4,  // The total size of the buffer, in bytes
-                 squareVertices, // Pointer to the data to copy over to VRAM
+                 aaa, // Pointer to the data to copy over to VRAM
                  GL_STATIC_DRAW); // Hint to the driver for how it’ll be used.
+
+	glGenBuffers(1, &vbo2);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo2);
+
+	glBufferData(GL_ARRAY_BUFFER, // Vertex Data
+		sizeof(Vertex) * 4,  // The total size of the buffer, in bytes
+		bbb, // Pointer to the data to copy over to VRAM
+		GL_STATIC_DRAW); // Hint to the driver for how it’ll be used.
     
     glGenBuffers(1, &indexBuffer);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer);
@@ -64,11 +90,19 @@ void InitExample2()
 				 squareIndices,			  // Pointer to the data to copy over to VRAM
 				 GL_STATIC_DRAW);		  // Hint to the driver for how it'll be used.
 
+	glGenBuffers(1, &indexBuffer2);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, indexBuffer2);
+
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, // Index Data
+		3 * sizeof(GLushort),	  // The total size of the buffer, in bytes
+		squareIndices2,			  // Pointer to the data to copy over to VRAM
+		GL_STATIC_DRAW);		  // Hint to the driver for how it'll be used.
+
     // Set attribute pointers
 	int iPosAttr = glGetAttribLocation(program, "a_position");
 	int iColAttr = glGetAttribLocation(program, "a_color");
 
-	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo2);
     glVertexAttribPointer(iPosAttr,					// Attribute location
 						  2,						// Number of components
 						  GL_FLOAT,					// Type of each component

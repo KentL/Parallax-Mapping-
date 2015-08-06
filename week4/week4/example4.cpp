@@ -83,8 +83,8 @@ void RenderExample4()
     // Use shader program.
     glUseProgram(program);
     
-	glm::mat4 mProj = glm::perspective(90.0f, 1280.0f / 720.0f, 0.1f, 1000.0f);
-	glm::mat4 mView = glm::lookAt(glm::vec3(0.0f,0.0f,4.0f), glm::vec3(0.0f,0.0f,0.0f), glm::vec3(0.0f,1.0f,0.0f));
+	glm::mat4 mProj = glm::ortho(90.0f, 1280.0f / 720.0f, 0.1f, 1000.0f);
+	glm::mat4 mView = glm::lookAt(glm::vec3(0.0f,0.0f,4.0f), glm::vec3(0.0f,0.0f,0.0f), glm::vec3(0.0f,-0.5f,0.0f));
 	
 	glUniformMatrix4fv(glGetUniformLocation(program,"projection"), 1, GL_FALSE, glm::value_ptr(mProj));
 	glUniformMatrix4fv(glGetUniformLocation(program,"view"), 1, GL_FALSE, glm::value_ptr(mView));

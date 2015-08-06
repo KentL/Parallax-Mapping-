@@ -37,13 +37,16 @@ static wolf::VertexDeclaration* g_pDecl = 0;
 static wolf::Program* g_pProgram = 0;
 static GLuint tex1;
 static GLuint tex2;
+static GLuint tex3;
+static GLuint tex4;
+static float g_fTime = 0;
 
 void InitExample3()
 {
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-    
-    g_pProgram = wolf::ProgramManager::CreateProgram("data/week6/two_textures.vsh", "data/week6/two_textures.fsh");
-    g_pVB = wolf::BufferManager::CreateVertexBuffer(squareVertices, sizeof(Vertex) * 6);
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+
+	g_pProgram = wolf::ProgramManager::CreateProgram("data/week6/two_textures.vsh", "data/week6/two_textures.fsh");
+	g_pVB = wolf::BufferManager::CreateVertexBuffer(squareVertices, sizeof(Vertex) * 6);
 
 	g_pDecl = new wolf::VertexDeclaration();
 	g_pDecl->Begin();
@@ -58,7 +61,7 @@ void InitExample3()
 		glBindTexture(GL_TEXTURE_2D, tex1);
 
 		GLFWimage img;
-		glfwReadImage( "data/week6/brick.tga", &img, 0 );
+		glfwReadImage("data/week6/brick.tga", &img, 0);
 		glTexImage2D(GL_TEXTURE_2D, 0, img.Format, img.Width, img.Height, 0, img.Format, GL_UNSIGNED_BYTE, img.Data);
 		glfwFreeImage(&img);
 
@@ -68,12 +71,27 @@ void InitExample3()
 	}
 
 	// Texture 2
+
+	{	glGenTextures(1, &tex2);
+	glBindTexture(GL_TEXTURE_2D, tex2);
+
+	GLFWimage img;
+	glfwReadImage("data/week6/lmap.tga", &img, 0);
+	glTexImage2D(GL_TEXTURE_2D, 0, img.Format, img.Width, img.Height, 0, img.Format, GL_UNSIGNED_BYTE, img.Data);
+
+
+	// These two lines are explained soon!
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glfwFreeImage(&img);
+	}
+	//texture 3
 	{
-		glGenTextures(1, &tex2);
-		glBindTexture(GL_TEXTURE_2D, tex2);
+		glGenTextures(1, &tex3);
+		glBindTexture(GL_TEXTURE_2D, tex3);
 
 		GLFWimage img;
-		glfwReadImage( "data/week6/lmap.tga", &img, 0 );
+		glfwReadImage("data/week6/baw1.tga", &img, 0);
 		glTexImage2D(GL_TEXTURE_2D, 0, img.Format, img.Width, img.Height, 0, img.Format, GL_UNSIGNED_BYTE, img.Data);
 		glfwFreeImage(&img);
 
@@ -81,11 +99,30 @@ void InitExample3()
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	}
+	//texture 4
+	{
+		glGenTextures(1, &tex4);
+		glBindTexture(GL_TEXTURE_2D, tex4);
 
+		GLFWimage img;
+		glfwReadImage("data/week6/baw2.tga", &img, 0);
+		glTexImage2D(GL_TEXTURE_2D, 0, img.Format, img.Width, img.Height, 0, img.Format, GL_UNSIGNED_BYTE, img.Data);
+		glfwFreeImage(&img);
+
+		// These two lines are explained soon!
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+		glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	}
 }
+	
+	
+
+
 
 void RenderExample3()
 {
+    g_fTime += 1.0f / 60.0f;
+    
     glm::mat4 mProj = glm::ortho(0.0f,1280.0f,720.0f,0.0f,0.0f,1000.0f);
 
     // Use shader program.
@@ -97,10 +134,23 @@ void RenderExample3()
 	glActiveTexture(GL_TEXTURE1);
 	glBindTexture(GL_TEXTURE_2D, tex2);
 
+ 	glActiveTexture(GL_TEXTURE2);
+    glBindTexture(GL_TEXTURE_2D, tex3);
+
+	glActiveTexture(GL_TEXTURE3);
+	glBindTexture(GL_TEXTURE_2D, tex4);
+
+
+	
+	
+
 	// Bind Uniforms
     g_pProgram->SetUniform("projection", mProj);
     g_pProgram->SetUniform("texture1", 0);
     g_pProgram->SetUniform("texture2", 1);
+	g_pProgram->SetUniform("texture3", 2);
+	g_pProgram->SetUniform("texture4", 3);
+    g_pProgram->SetUniform("time", g_fTime);
     
 	// Set up source data
 	g_pDecl->Bind();

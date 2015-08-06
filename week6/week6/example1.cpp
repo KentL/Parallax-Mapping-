@@ -37,6 +37,7 @@ static GLubyte g_aTexture[] = {
      255, 255, 0, // yellow
      255, 0, 0,  // red
      0, 255, 0,  // green
+//    255,0,0
 };
 
 static wolf::VertexBuffer* g_pVB = 0;
@@ -46,7 +47,7 @@ static GLuint tex;
 
 void InitExample1()
 {
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+    glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
     
     g_pProgram = wolf::ProgramManager::CreateProgram("data/week6/one_texture.vsh", "data/week6/one_texture.fsh");
     g_pVB = wolf::BufferManager::CreateVertexBuffer(squareVertices, sizeof(Vertex) * 6);
@@ -75,7 +76,7 @@ void RenderExample1()
     
 	// Bind Uniforms
     g_pProgram->SetUniform("projection", mProj);
-    g_pProgram->SetUniform("texture", 0);
+    g_pProgram->SetUniform("tex", 0);
     
 	// Set up source data
 	g_pDecl->Bind();

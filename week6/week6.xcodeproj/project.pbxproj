@@ -266,7 +266,10 @@
 		E14BDC8A15C5F4A800EBDCCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)/../glfw/include\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lglfw",
 					"-L/usr/local/lib",
@@ -278,7 +281,10 @@
 		E14BDC8B15C5F4A800EBDCCE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/..\"";
+				HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/..\"",
+					"\"$(SRCROOT)/../glfw/include\"",
+				);
 				OTHER_LDFLAGS = (
 					"-lglfw",
 					"-L/usr/local/lib",

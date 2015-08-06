@@ -3,19 +3,37 @@
   <ItemGroup>
     <ClCompile Include="week5\example1.cpp" />
     <ClCompile Include="week5\main.cpp" />
-    <ClCompile Include="..\wolf\W_Common.cpp">
-      <Filter>wolf</Filter>
-    </ClCompile>
     <ClCompile Include="week5\example2.cpp" />
     <ClCompile Include="week5\example3.cpp" />
     <ClCompile Include="week5\example4.cpp" />
     <ClCompile Include="..\wolf\W_Buffer.cpp">
       <Filter>wolf</Filter>
     </ClCompile>
+    <ClCompile Include="..\wolf\W_BufferManager.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\W_Common.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
     <ClCompile Include="..\wolf\W_IndexBuffer.cpp">
       <Filter>wolf</Filter>
     </ClCompile>
+    <ClCompile Include="..\wolf\W_Material.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\W_MaterialManager.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
     <ClCompile Include="..\wolf\W_Program.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\W_ProgramManager.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\W_Texture.cpp">
+      <Filter>wolf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wolf\W_TextureManager.cpp">
       <Filter>wolf</Filter>
     </ClCompile>
     <ClCompile Include="..\wolf\W_VertexBuffer.cpp">
@@ -24,22 +42,42 @@
     <ClCompile Include="..\wolf\W_VertexDeclaration.cpp">
       <Filter>wolf</Filter>
     </ClCompile>
+    <ClCompile Include="week5\example5.cpp" />
+    <ClCompile Include="Cube.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="week5\examples.h" />
-    <ClInclude Include="..\wolf\W_Common.h">
-      <Filter>wolf</Filter>
-    </ClInclude>
-    <ClInclude Include="..\wolf\W_Types.h">
-      <Filter>wolf</Filter>
-    </ClInclude>
     <ClInclude Include="..\wolf\W_Buffer.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_BufferManager.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_Common.h">
       <Filter>wolf</Filter>
     </ClInclude>
     <ClInclude Include="..\wolf\W_IndexBuffer.h">
       <Filter>wolf</Filter>
     </ClInclude>
+    <ClInclude Include="..\wolf\W_Material.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_MaterialManager.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
     <ClInclude Include="..\wolf\W_Program.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_ProgramManager.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_Texture.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_TextureManager.h">
+      <Filter>wolf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\wolf\W_Types.h">
       <Filter>wolf</Filter>
     </ClInclude>
     <ClInclude Include="..\wolf\W_VertexBuffer.h">
@@ -48,10 +86,15 @@
     <ClInclude Include="..\wolf\W_VertexDeclaration.h">
       <Filter>wolf</Filter>
     </ClInclude>
+    <ClInclude Include="Cube.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="wolf">
       <UniqueIdentifier>{3c684ae4-ebd7-4333-a9db-381b9b70d2e1}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\data\week5\cube.fsh" />
+    <None Include="..\data\week5\cube.vsh" />
   </ItemGroup>
 </Project>

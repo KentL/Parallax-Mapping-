@@ -12,17 +12,54 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="week4\examples.h" />
     <ClInclude Include="..\wolf\W_Common.h">
       <Filter>wolf</Filter>
     </ClInclude>
     <ClInclude Include="..\wolf\W_Types.h">
       <Filter>wolf</Filter>
     </ClInclude>
+    <ClInclude Include="week4\examples.h">
+      <Filter>data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="wolf">
       <UniqueIdentifier>{3c684ae4-ebd7-4333-a9db-381b9b70d2e1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{7a0ac480-0484-4434-8d89-1bd7cb8371aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\data\week4\example1.fsh">
+      <Filter>data</Filter>
+    </None>
+    <None Include="..\data\week4\example5.fsh">
+      <Filter>data</Filter>
+    </None>
+    <None Include="..\data\week4\example5.vsh">
+      <Filter>data</Filter>
+    </None>
+    <None Include="..\data\week4\example1.vsh">
+      <Filter>data</Filter>
+    </None>
+    <None Include="..\data\week4\example2.fsh">
+      <Filter>data</Filter>
+    </None>
+    <None Include="..\data\week4\example2.vsh">
+      <Filter>data</Filter>
+    </None>
+    <None Include="..\data\week4\example3.fsh">
+      <Filter>data</Filter>
+    </None>
+    <None Include="..\data\week4\example3.vsh">
+      <Filter>data</Filter>
+    </None>
+    <None Include="..\data\week4\example4.fsh">
+      <Filter>data</Filter>
+    </None>
+    <None Include="..\data\week4\example4.vsh">
+      <Filter>data</Filter>
+    </None>
   </ItemGroup>
 </Project>

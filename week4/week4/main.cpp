@@ -12,7 +12,7 @@
 #include "W_Common.h"
 #include "examples.h"
 
-int g_iExample = 5;
+int g_iExample = 1;
 
 int main( void )
 {
@@ -26,13 +26,15 @@ int main( void )
         exit( EXIT_FAILURE );
     }
     
+    //glfwOpenWindowHint(GLFW_OPENGL_VERSION_MAJOR, 3);
+    //glfwOpenWindowHint(GLFW_OPENGL_VERSION_MINOR, 2);
+    //glfwOpenWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
+    //glfwOpenWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     glfwOpenWindowHint(GLFW_OPENGL_VERSION_MAJOR, 3);
-    glfwOpenWindowHint(GLFW_OPENGL_VERSION_MINOR, 2);
-    glfwOpenWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-    glfwOpenWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwOpenWindowHint(GLFW_OPENGL_VERSION_MINOR, 1);
     
     // Open a window and create its OpenGL context
-    if( !glfwOpenWindow( 1280, 720, 0,0,0,0, 0,0, GLFW_WINDOW ) )
+    if( !glfwOpenWindow( 1280, 720, 0,0,0,0, 24,0, GLFW_WINDOW ) )
     {
         fprintf( stderr, "Failed to open GLFW window\n" );
         
@@ -80,7 +82,7 @@ int main( void )
         
         // Clear color buffer to black
         glClearColor( 0.4f, 0.4f, 0.4f, 0.0f );
-        glClear( GL_COLOR_BUFFER_BIT );
+        glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
         
 		switch( g_iExample )
 		{
@@ -93,6 +95,25 @@ int main( void )
 
         // Swap buffers
         glfwSwapBuffers();
+
+		////************************************//
+		//glViewport(width/2, height/2, width, height);
+
+		//// Clear color buffer to black
+		//glClearColor(0.4f, 0.4f, 0.4f, 0.0f);
+		//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+		//switch (g_iExample)
+		//{
+		//case 1: RenderExample1(); break;
+		//case 2: RenderExample2(); break;
+		//case 3: RenderExample3(); break;
+		//case 4: RenderExample4(); break;
+		//case 5: RenderExample5(); break;
+		//}
+
+		//// Swap buffers
+		//glfwSwapBuffers();
         
     } // Check if the ESC key was pressed or the window was closed
     while( glfwGetKey( GLFW_KEY_ESC ) != GLFW_PRESS &&

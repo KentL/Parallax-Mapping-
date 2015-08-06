@@ -36,13 +36,16 @@ static wolf::VertexBuffer* g_pVB = 0;
 static wolf::VertexDeclaration* g_pDecl = 0;
 static wolf::Program* g_pProgram = 0;
 static GLuint tex;
+static GLuint tex2;
+static wolf::VertexBuffer* g_pVB2 = 0;
+static wolf::VertexDeclaration* g_pDecl2 = 0;
 
 void InitExample2()
 {
-    glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-    
-    g_pProgram = wolf::ProgramManager::CreateProgram("data/week6/one_texture.vsh", "data/week6/one_texture.fsh");
-    g_pVB = wolf::BufferManager::CreateVertexBuffer(squareVertices, sizeof(Vertex) * 6);
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+
+	g_pProgram = wolf::ProgramManager::CreateProgram("data/week6/one_texture.vsh", "data/week6/one_texture.fsh");
+	g_pVB = wolf::BufferManager::CreateVertexBuffer(sizeof(Vertex) * 6);
 
 	g_pDecl = new wolf::VertexDeclaration();
 	g_pDecl->Begin();
@@ -55,25 +58,44 @@ void InitExample2()
 	glBindTexture(GL_TEXTURE_2D, tex);
 
 	GLFWimage img;
-	glfwReadImage( "data/week6/brick.tga", &img, 0 );
+	glfwReadImage("data/week6/brick.tga", &img, 0);
 	glTexImage2D(GL_TEXTURE_2D, 0, img.Format, img.Width, img.Height, 0, img.Format, GL_UNSIGNED_BYTE, img.Data);
 	glfwFreeImage(&img);
 
 	// These two lines are explained soon!
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+	glGenTextures(1, &tex2);
+	glBindTexture(GL_TEXTURE_2D, tex2);
+
+
+	glfwReadImage("data/week6/color.tga", &img, 0);
+	glTexImage2D(GL_TEXTURE_2D, 0, img.Format, img.Width, img.Height, 0, img.Format, GL_UNSIGNED_BYTE, img.Data);
+	glfwFreeImage(&img);
+
+	// These two lines are explained soon!
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, tex);
+
+	glActiveTexture(GL_TEXTURE1);
+	glBindTexture(GL_TEXTURE_2D, tex2);
+	
 }
 
 void RenderExample2()
 {
     glm::mat4 mProj = glm::ortho(0.0f,1280.0f,720.0f,0.0f,0.0f,1000.0f);
-
+	g_pVB->Write(squareVertices);
     // Use shader program.
 	g_pProgram->Bind();
     
 	// Bind Uniforms
     g_pProgram->SetUniform("projection", mProj);
-    g_pProgram->SetUniform("texture", 0);
+    g_pProgram->SetUniform("texture", 1);
     
 	// Set up source data
 	g_pDecl->Bind();
